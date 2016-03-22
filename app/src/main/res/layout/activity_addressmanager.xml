@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.DIndividualActivity.AddressmanagerActivity"
+    android:orientation="vertical"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="地址管理"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:id="@+id/textView28" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/addressmanager_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/ten"
+        android:layout_marginBottom="@dimen/y24"
+        >
+
+    </ListView>
+
+        <Button
+            android:id="@+id/addressmanager_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonback"
+            android:minHeight="0dp"
+            android:padding="@dimen/y6"
+            android:gravity="center"
+            android:text="添加收货地址"
+            android:textColor="#fff"
+            android:textSize="@dimen/fifteen"
+            android:layout_alignParentBottom="true"
+            />
+</RelativeLayout>
+
+</LinearLayout>

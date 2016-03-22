@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/x19"
+        android:paddingTop="@dimen/y10"
+        android:paddingBottom="@dimen/y10"
+        android:background="#fff"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_coupon_used"
+            android:gravity="center"
+            android:paddingTop="@dimen/y8"
+            android:paddingBottom="@dimen/y8"
+            android:paddingLeft="@dimen/x13"
+            android:paddingRight="@dimen/x15"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textSize="@dimen/x10"
+                    android:textColor="#fff"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textSize="@dimen/x20"
+                    android:textColor="#fff"
+                    android:id="@+id/adapter_couponout_money" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/x10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="满1000元"
+                    android:textSize="@dimen/x9"
+                    android:textColor="#fff"
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/adapter_couponout_moneyuse" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用"
+                    android:textSize="@dimen/x9"
+                    android:textColor="#fff"
+                    android:layout_marginTop="2dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x9"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="俱乐部会员优惠劵-满1000元减10元"
+                android:textSize="@dimen/x9"
+                android:textColor="@color/black"
+                android:id="@+id/adapter_couponout_mes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="过期时间：2015.11.22 23:59:59"
+                android:textSize="@dimen/x9"
+                android:layout_marginTop="@dimen/y5"
+                android:textColor="@color/black"
+                android:id="@+id/adapter_couponout_time" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

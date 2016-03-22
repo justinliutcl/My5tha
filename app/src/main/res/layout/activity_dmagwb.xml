@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DIndividualActivity.DMAgwbActivity"
+    android:background="@color/background"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#fff"
+        topbar:medtitle="我的购物币"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:background="#fff"
+        >
+        <TextView
+            android:id="@+id/mgwb_gwb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textSize="@dimen/x25"
+            android:textStyle="bold"
+            android:textColor="@color/main_color"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总购物币（元）"
+            android:textSize="@dimen/x9"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/main_gry"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:layout_marginTop="8dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/mgwb_duihuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="兑换记录"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/medsize" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/mgwb_chongzhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="充值记录"
+                android:textColor="@color/blackinwhite"
+                android:textSize="@dimen/medsize" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <viewpagerindicator.UnderlinePageIndicator
+        android:id="@+id/mgwb_indicator"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        ></viewpagerindicator.UnderlinePageIndicator>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mgwb_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        ></android.support.v4.view.ViewPager>
+</LinearLayout>

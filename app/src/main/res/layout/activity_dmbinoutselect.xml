@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DIndividualActivity.DMBinoutselectActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x10"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/grayandgray"
+            android:padding="8dp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search"
+                android:id="@+id/imageView3" />
+
+            <EditText
+                android:id="@+id/sign_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="8dp"
+                android:textSize="@dimen/editsize"
+                android:textColor="@color/blackinwhite"
+                android:textColorHint="@color/hintcolor"
+                android:hint="请输入11位手机号"
+                android:background="#eaebed"
+                android:inputType="phone" >
+
+            </EditText>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/textView20" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+    <customUI.PullToRefreshView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/inout_list"
+        android:orientation="vertical"
+        >
+        <ListView
+            android:id="@+id/inout_listview"
+            android:cacheColorHint="#00000000"
+            android:background="#fff"
+            android:divider="@color/grayline"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="1dp"
+            />
+    </customUI.PullToRefreshView>
+
+</LinearLayout>

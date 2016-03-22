@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.DIndividualActivity.PopulazeActivity"
+    android:orientation="vertical"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="推广链接"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:id="@+id/textView28" />
+<ImageView
+    android:id="@+id/popularize_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitXY"
+    />
+</LinearLayout>

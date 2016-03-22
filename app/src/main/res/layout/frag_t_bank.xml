@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    >
+    <TextView
+        android:layout_marginTop="@dimen/y10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="持卡人：  "
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x13"
+            />
+
+        <EditText
+            android:id="@+id/tbank_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/editsize"
+            android:textColor="@color/blackinwhite"
+            android:textColorHint="@color/hintcolor"
+            android:hint="请输入持卡人姓名"
+            android:padding="10dp"
+            android:background="#fff"
+            android:inputType="text" >
+
+        </EditText>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="银行卡号："
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x13"
+            />
+
+        <EditText
+            android:id="@+id/tbank_banknum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/editsize"
+            android:textColor="@color/blackinwhite"
+            android:textColorHint="@color/hintcolor"
+            android:hint="请输入您的银行卡号"
+            android:padding="10dp"
+            android:background="#fff"
+            android:inputType="phone" >
+
+        </EditText>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户银行："
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x13"
+            />
+
+
+        <TextView
+            android:id="@+id/tbank_bank"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/editsize"
+            android:textColor="@color/blackinwhite"
+            android:textColorHint="@color/hintcolor"
+            android:padding="10dp"
+            android:background="#fff"
+            android:inputType="phone" >
+
+        </TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现金额："
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x13"
+            />
+
+        <EditText
+            android:id="@+id/tbank_timoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/editsize"
+            android:textColor="@color/blackinwhite"
+            android:textColorHint="@color/hintcolor"
+            android:hint="请输入您需要提现的金额"
+            android:padding="10dp"
+            android:background="#fff"
+            android:inputType="phone" >
+
+        </EditText>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付密码："
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x13"
+            />
+
+        <EditText
+            android:id="@+id/tbank_paycode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/editsize"
+            android:textColor="@color/blackinwhite"
+            android:textColorHint="@color/hintcolor"
+            android:hint="请输入第五大街平台支付密码"
+            android:padding="10dp"
+            android:background="#fff"
+            android:inputType="textPassword" >
+
+        </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/tbank_tixian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonback"
+            android:minHeight="0dp"
+            android:padding="@dimen/buttonpadding"
+            android:text="申请提现"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.DIndividualActivity.ChonglineActivity"
+    android:orientation="vertical"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="在线充值"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView6" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                android:layout_marginTop="@dimen/y8"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve"
+                    android:text="充值金额(元):"
+                    />
+                <EditText
+                    android:id="@+id/chongonline_money"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="#444"
+                    android:textColorHint="@color/hintcolor"
+                    android:hint="请输入充值金额"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:inputType="phone" >
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                android:layout_marginTop="@dimen/y8"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="4dp"
+                android:paddingBottom="10dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="请选择支付方式"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="14dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="14dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:id="@+id/chongonline_layout_alipy">
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:src="@drawable/icon_pay_zfb2x"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/thirteen"
+                        android:text="请选择支付方式"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/main_sgry"
+                        android:textSize="@dimen/ten"
+                        android:layout_marginTop="4dp"
+                        android:text="推荐有支付宝账号的用户使用"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:src="@drawable/bg_radio_on3x"
+                    android:id="@+id/chongonline_img_alipy" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="14dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="14dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:id="@+id/chongonline_layout_wepay">
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:src="@drawable/icon_pay_wx2x"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/thirteen"
+                        android:text="微信支付"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/main_sgry"
+                        android:textSize="@dimen/ten"
+                        android:layout_marginTop="4dp"
+                        android:text="推荐安装微信5.0及以上版本的使用"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:src="@drawable/bg_radio3x"
+                    android:id="@+id/chongonline_img_wepay" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/chongonline_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonback"
+                    android:minHeight="0dp"
+                    android:padding="@dimen/buttonpadding"
+                    android:text="确定充值"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/button_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x13"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/x13"
+                    android:layout_height="@dimen/x13"
+                    android:src="@drawable/icon_s_notice2x"
+                    android:id="@+id/imageView14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="温馨提示："
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/eleven"
+                    android:layout_marginBottom="@dimen/y10"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:id="@+id/textView47" />
+            </LinearLayout>
+
+            <TextView
+                android:paddingLeft="@dimen/x13"
+                android:paddingRight="@dimen/x13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1、充值成功后，余额可能存在延迟现象，一般1分到5分钟内到账，如有问题，请咨询客服；"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/x9"
+                android:lineSpacingExtra="@dimen/y6"
+                />
+
+            <TextView
+                android:paddingLeft="@dimen/x13"
+                android:paddingRight="@dimen/x13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2、您可以用储蓄卡和支付宝等第三方支付，如遇到任何支付问题可以联系客服，邮箱：24h@5tha.com"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/x9"
+                android:layout_marginTop="@dimen/y6"
+                android:lineSpacingExtra="@dimen/y6"
+                />
+
+            <TextView
+                android:paddingLeft="@dimen/x13"
+                android:paddingRight="@dimen/x13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y6"
+                android:text="3、充值完成后，您可以进入账户充值记录页面进行查看余额充值状态。"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/x9"
+                android:lineSpacingExtra="@dimen/y6"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

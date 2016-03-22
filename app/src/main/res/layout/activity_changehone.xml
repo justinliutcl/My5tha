@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.Setting.ChangehoneActivity"
+    android:orientation="vertical"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="修改手机号"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="为了您的账户安全，需要验证您的身份"
+        android:textSize="@dimen/x10"
+        android:textColor="#fff"
+        android:background="#bbb"
+        android:gravity="center"
+        android:padding="@dimen/x7"
+        android:id="@+id/textView23" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前手机号码 "
+        android:textColor="@color/black"
+        android:textSize="@dimen/forteen"
+        android:padding="@dimen/x9"
+        android:id="@+id/changephone_oldphone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:id="@+id/textView28" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        >
+
+        <EditText
+            android:id="@+id/changephone_authcode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/editsize"
+            android:textColor="#444"
+            android:textColorHint="@color/hintcolor"
+            android:hint="请输入短信验证码"
+            android:padding="10dp"
+            android:background="#fff"
+            android:inputType="phone" >
+
+        </EditText>
+        <Button
+            android:id="@+id/changephone_sendoldsms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textSize="@dimen/minsize"
+            android:textColor="@color/main_color"
+            android:minHeight="0dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:minWidth="0dp"
+            android:background="@drawable/smsbg_redandwhite"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/changephone_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonback"
+            android:minHeight="0dp"
+            android:padding="@dimen/buttonpadding"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="#fff"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+</LinearLayout>

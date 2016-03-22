@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x15"
+        android:paddingBottom="@dimen/y14"
+        android:paddingTop="@dimen/y13"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x85"
+            android:layout_height="@dimen/x85"
+            android:background="@drawable/grayandwhite_noricepe"
+            android:padding="2dp"
+            android:id="@+id/adapter_collect_img" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/y5"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x8"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="轨道积木电动轨道火车"
+                android:textSize="@dimen/x12"
+                android:textColor="#333"
+                android:id="@+id/adapter_collect_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="本恩施 轨道积木电动车 火车套装yi次"
+                android:textSize="@dimen/x10"
+                android:textColor="@color/main_gry"
+                android:layout_marginTop="5dp"
+                android:id="@+id/adapter_collect_longtitle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥59.00"
+                android:layout_gravity="bottom"
+                android:textSize="@dimen/forteen"
+                android:textColor="#ff0090"
+                android:id="@+id/adapter_collect_money" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x30"
+            android:paddingLeft="@dimen/x10"
+            android:paddingBottom="@dimen/x10"
+            android:paddingRight="@dimen/x15"
+            android:src="@drawable/icon_ashbin2x"
+            android:id="@+id/adapter_collect_delete" />
+    </LinearLayout>
+</LinearLayout>

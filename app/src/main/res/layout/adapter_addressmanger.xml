@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:focusable="false"
+    android:paddingTop="@dimen/y20"
+    android:paddingBottom="@dimen/y12"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x8"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蔡宇涵"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twelve"
+
+            android:id="@+id/adapter_addressmanger_name" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18134710114"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eleven"
+            android:id="@+id/adapter_addressmanger_phone"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ten"
+        android:textColor="@color/main_sgry"
+        android:paddingLeft="@dimen/x11"
+        android:paddingRight="@dimen/x8"
+        android:text="aksjdhkajshkjaskhdaaskldjlaksjdlkasjalkjsdklajsldkajslkdjalsdjashfkjdhakjshdlaksjdk"
+        android:layout_marginTop="@dimen/y10"
+        android:lineSpacingExtra="@dimen/y10"
+        android:id="@+id/adapter_addressmanger_address" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/y10"
+        android:background="#e1e1e1"
+        android:id="@+id/textView35" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/x20"
+        android:paddingRight="@dimen/x8"
+
+        android:layout_marginTop="@dimen/y10"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/adapter_addressmanger_layout_defaultaddress"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/fifteen"
+                android:layout_height="@dimen/fifteen"
+                android:id="@+id/adapter_addressmanger_img_imgdefault"
+                android:src="@drawable/bg_radio_on3x"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="默认地址"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/ten"
+                android:layout_marginLeft="6dp"
+                android:id="@+id/textView36" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adapter_addressmanger_layout_edit"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical|right"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/fifteen"
+                android:layout_height="@dimen/fifteen"
+                android:id="@+id/adapter_addressmanger_imgedit"
+                android:src="@drawable/icon_edit2x"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编辑"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/ten"
+                android:layout_marginLeft="6dp"
+                android:id="@+id/textView37" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:id="@+id/adapter_addressmanger_layout_delete"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/fifteen"
+                android:layout_height="@dimen/fifteen"
+                android:src="@drawable/icon_ashbin2x"
+                android:id="@+id/adapter_addressmanger_imgdelete"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/ten"
+                android:layout_marginLeft="6dp"
+                android:id="@+id/textView38" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

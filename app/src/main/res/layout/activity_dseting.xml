@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting.DSetingActivity"
+    android:background="@color/background"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:background="#fff"
+        topbar:medtitle="个人设置"
+        topbar:left_size="20dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/seting_layout_img"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/y6"
+                android:paddingBottom="@dimen/y6"
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="头像设置"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:id="@+id/editText" />
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="@dimen/x10">
+
+
+
+
+                    <customUI.MyImageView
+                        android:layout_width="@dimen/x58"
+                        android:layout_height="@dimen/x58"
+                        android:src="@drawable/hugh"
+                        android:id="@+id/seting_img"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/x13"
+                        />
+                    <ImageView
+
+                        android:layout_width="@dimen/x64"
+                        android:layout_height="@dimen/x64"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/photo_bg" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="@dimen/x8"
+                    android:layout_height="@dimen/y14"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_arroew_gray3x"
+                    android:id="@+id/imageView10" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="昵称"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="哆啦A梦"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="男"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="会员级别"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成为俱乐部会员"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifteen"
+                android:background="@color/grayline" />
+
+            <LinearLayout
+
+                android:id="@+id/seting_layout_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="手机号"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="158****5778"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_signpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="修改登录密码"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_paypassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="支付密码"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_paypassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="未设置"
+                    android:textColor="#ccc"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/fifteen"
+                android:background="@color/grayline" />
+            <LinearLayout
+                android:id="@+id/seting_layout_bindwechat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="绑定微信"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_wichat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="已绑定"
+                    android:textColor="#ccc"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_bindqq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="绑定QQ"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="已绑定"
+                    android:textColor="#ccc"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/seting_layout_bindwibo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/y50"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="绑定微博"
+                    android:textSize="@dimen/forteen"
+                    android:textColor="@color/seting"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/seting_wibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="地址管理"
+                    android:textColor="#ccc"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

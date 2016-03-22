@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+    <customUI.PullToRefreshView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chongzhi_list"
+        android:orientation="vertical"
+        >
+        <ListView
+            android:id="@+id/chongzhi_listview"
+            android:cacheColorHint="#00000000"
+            android:background="#fff"
+            android:divider="@color/grayline"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="1dp"
+            />
+    </customUI.PullToRefreshView>
+</LinearLayout>

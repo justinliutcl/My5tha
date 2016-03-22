@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DIndividualActivity.DWdqbActivity"
+    android:background="@color/background"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="我的钱包"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#fff"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总购物币（元）"
+        android:textColor="@color/IndividualSgray"
+        android:textSize="9dp"
+        />
+        <TextView
+            android:id="@+id/wdqb_gwb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000.00"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/y10"
+            android:textSize="20dp"
+            android:textColor="@color/main_color"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="@dimen/y15"
+            >
+            <Button
+                android:id="@+id/wdqb_btn_paycard"
+                android:layout_width="@dimen/x60"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonback"
+                android:text="兑换充值卡"
+                android:textColor="#fff"
+                android:paddingTop="8dp"
+                android:minHeight="0dp"
+                android:paddingBottom="8dp"
+                android:gravity="center"
+                android:textSize="@dimen/minsize"
+                />
+            <Button
+                android:id="@+id/wdqb_btn_payline"
+                android:layout_width="@dimen/x60"
+                android:layout_height="wrap_content"
+                android:background="@drawable/redandwhite"
+                android:text="在线充值"
+                android:textColor="@color/main_color"
+                android:padding="8dp"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:textSize="@dimen/minsize"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:layout_marginTop="@dimen/y5"
+        />
+    <LinearLayout
+        android:id="@+id/wdqb_layout_gwb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="我的购物币"
+            android:textColor="@color/blackinwhite"
+            android:textSize="@dimen/individualmedsize" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:id="@+id/wdqb_layout_commission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="我的佣金"
+            android:textColor="@color/blackinwhite"
+            android:textSize="@dimen/individualmedsize" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:id="@+id/wdqb_layout_travel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="旅游基金"
+            android:textColor="@color/blackinwhite"
+            android:textSize="@dimen/individualmedsize" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:id="@+id/wdqb_layout_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="我的优惠劵"
+            android:textColor="@color/blackinwhite"
+            android:textSize="@dimen/individualmedsize" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:id="@+id/wdqb_layout_payhistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="交易记录"
+            android:textColor="@color/blackinwhite"
+            android:textSize="@dimen/individualmedsize" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+</LinearLayout>

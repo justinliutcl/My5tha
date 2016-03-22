@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DIndividualActivity.DMDtxdetailsActivity" android:background="@color/background"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#fff"
+        topbar:medtitle="我的购物币"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/y16"
+        android:background="#fff"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现金额（元）"
+            android:textSize="@dimen/x10"
+            android:textColor="@color/main_gry"
+            android:id="@+id/textView" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:id="@+id/textView3"
+                android:textSize="@dimen/x9"
+                android:textColor="@color/main_color"
+                android:layout_marginRight="3dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textStyle="bold"
+                android:id="@+id/txdetails_money"
+                android:textSize="@dimen/x19"
+                android:textColor="@color/main_color"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x15"
+                android:paddingTop="@dimen/x11"
+                android:paddingBottom="@dimen/x10"
+                android:paddingRight="@dimen/x24"
+                android:background="#fff"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/x12"
+                            android:layout_height="@dimen/x12"
+                            android:src="@drawable/radio_on"
+                            />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/x6"
+                            android:background="#f32d61"
+                            android:id="@+id/textView18" />
+
+                        <ImageView
+                            android:layout_width="@dimen/x12"
+                            android:layout_height="@dimen/x12"
+                            android:layout_marginBottom="@dimen/y18"
+                            android:src="@drawable/red_oval"
+                            android:id="@+id/txdetails_img_finishtime" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提交提现申请"
+                            android:textSize="@dimen/x12"
+                            android:textColor="@color/black"
+                            android:id="@+id/textView19" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016-00-00 00:00:00"
+                            android:textSize="@dimen/x12"
+                            android:layout_marginTop="@dimen/y5"
+                            android:textColor="@color/main_sgry"
+                            android:id="@+id/txdetails_shenqingtime" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提交提现申请"
+                            android:layout_marginTop="@dimen/y30"
+                            android:textSize="@dimen/x12"
+                            android:textColor="@color/black"
+                            android:id="@+id/textView21" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016-00-00 00:00:00"
+                            android:textSize="@dimen/x12"
+                            android:layout_marginTop="@dimen/y5"
+                            android:textColor="@color/main_sgry"
+                            android:id="@+id/txdetails_finishtime" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="审核通过"
+                        android:textColor="@color/main_color"
+                        android:gravity="right|bottom"
+                        android:textSize="@dimen/x10"
+                        android:id="@+id/txdetails_shenhe" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txdetails_layout_successdetails"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x19"
+                    android:paddingRight="@dimen/x9"
+                    android:paddingTop="@dimen/y8"
+                    android:paddingBottom="@dimen/y7"
+                    android:background="#fff"
+                    android:layout_marginTop="10dp"
+
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥0.00"
+                            android:textSize="@dimen/x12"
+                            android:textColor="@color/main_color"
+                            android:id="@+id/txdetails_successmoney" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提现至微信"
+                            android:textSize="@dimen/x12"
+                            android:layout_marginTop="@dimen/y5"
+                            android:textColor="@color/blackinwhite"
+                            android:id="@+id/txdetails_direction" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="提现成功"
+                        android:textSize="@dimen/x12"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/textView25" />
+
+                    <ImageView
+                        android:layout_width="@dimen/x13"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/button_down"
+                        android:id="@+id/txdetails_updown" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dedede"
+                    />
+                <LinearLayout
+                    android:id="@+id/txdetails_layout_content"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/x15"
+                    android:paddingTop="@dimen/y10"
+                    android:paddingRight="@dimen/x22"
+                    android:paddingBottom="@dimen/y15"
+                    android:background="#faf7f8"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/x12"
+                        android:src="@drawable/radio_on"
+                        android:id="@+id/imageView9"
+                        android:layout_marginTop="@dimen/y1"
+                        />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x15"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提现处理"
+                            android:textSize="@dimen/x12"
+                            android:textColor="@color/black"
+                            android:id="@+id/textView26" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016-01-31 15:48:00"
+                            android:textSize="@dimen/x12"
+                            android:textColor="@color/main_gry"
+                            android:layout_marginTop="@dimen/y5"
+                            android:id="@+id/txdetails_paytime" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已将资金转移至微信处理"
+                            android:textSize="@dimen/x12"
+                            android:textColor="@color/main_sgry"
+                            android:layout_marginTop="@dimen/y5"
+                            android:id="@+id/txdetails_paydirection" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="处理完成"
+                        android:textSize="@dimen/x12"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/textView29" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

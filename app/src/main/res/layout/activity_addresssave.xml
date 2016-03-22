@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.DIndividualActivity.Addresssave"
+    android:orientation="vertical"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="收货地址"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:id="@+id/textView28" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView4" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/twelve"
+                    android:layout_marginLeft="10dp"
+                    android:text="*"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="收货人："
+                    />
+                <EditText
+                    android:id="@+id/addresssave_user"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="@color/main_gry"
+                    android:textColorHint="@color/hintcolor"
+                    android:hint="建议使用真实姓名"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:inputType="text" >
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/twelve"
+                    android:layout_marginLeft="10dp"
+                    android:text="*"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="联系方式："
+                    />
+                <EditText
+                    android:id="@+id/addresssave_phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="@color/main_gry"
+                    android:textColorHint="@color/hintcolor"
+                    android:hint="建议使用真实姓名"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:inputType="phone" >
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/twelve"
+                    android:layout_marginLeft="10dp"
+                    android:text="*"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="身份证："
+                    />
+                <EditText
+                    android:id="@+id/addresssave_idcard"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="@color/main_gry"
+                    android:textColorHint="@color/hintcolor"
+                    android:hint="跨境产品需填写身份证(我们将加密处理)"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+
+                    android:background="#fff"
+                    android:inputType="phone" >
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:id="@+id/addresssave_layout_selectarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/twelve"
+                    android:layout_marginLeft="10dp"
+                    android:text="*"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="所在地区："
+                    />
+                <TextView
+                    android:id="@+id/addresssave_area"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="@color/hintcolor"
+                    android:padding="10dp"
+                    android:text="请选择你所在的省、市、区"
+                    android:background="#fff"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/twelve"
+                    android:layout_marginLeft="10dp"
+                    android:text="*"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="详细地址："
+                    />
+                <EditText
+                    android:id="@+id/addresssave_detail"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="@color/main_gry"
+                    android:textColorHint="@color/hintcolor"
+                    android:hint="请输入详细地址"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:inputType="text" >
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/twelve"
+                    android:layout_marginLeft="10dp"
+                    android:text="*"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_gry"
+                    android:textSize="@dimen/twelve"
+                    android:text="邮政编码："
+                    />
+                <EditText
+                    android:id="@+id/addresssave_zipcode"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="@dimen/editsize"
+                    android:textColor="@color/main_gry"
+                    android:textColorHint="@color/hintcolor"
+                    android:hint="请输入邮政编码"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:inputType="text" >
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/addresssave_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonback"
+                    android:minHeight="0dp"
+                    android:padding="@dimen/buttonpadding"
+                    android:text="保存地址"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/button_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

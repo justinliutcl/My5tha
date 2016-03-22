@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/x10"
+        android:paddingTop="@dimen/y10"
+        android:paddingBottom="@dimen/y10"
+        android:background="#fff"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_coupon"
+            android:gravity="center"
+            android:paddingTop="@dimen/y8"
+            android:paddingBottom="@dimen/y8"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥10"
+                android:textSize="@dimen/x13"
+                android:textColor="#fff"
+                android:id="@+id/adapter_coupon_money" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200张优惠劵"
+                android:textSize="@dimen/x8"
+                android:textColor="#fff"
+                android:layout_marginTop="1dp"
+                android:id="@+id/adapter_coupon_sum" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="俱乐部会员优惠劵-满1000元减10元"
+                android:textSize="@dimen/x9"
+                android:textColor="@color/black"
+                android:id="@+id/adapter_coupon_mes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="过期时间：2015.11.22 23:59:59"
+                android:textSize="@dimen/x9"
+                android:layout_marginTop="@dimen/y5"
+                android:textColor="@color/black"
+                android:id="@+id/adapter_coupon_time" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
