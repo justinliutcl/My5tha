@@ -9,7 +9,9 @@ import InternetUser.order.GoodsorderItem;
  */
 public class GoodsorderUser {
     private String PageCount;
-    private List<GoodsorderItem>list;
+    private double Balance;
+    private double Commission;
+    private List<GoodsorderItem>List;
 
     public String getPageCount() {
         return PageCount;
@@ -19,21 +21,38 @@ public class GoodsorderUser {
         PageCount = pageCount;
     }
 
-    public List<GoodsorderItem> getList() {
-        return list;
+    public double getBalance() {
+        return Balance;
     }
 
-    public void setList(List<GoodsorderItem> list) {
-        this.list = list;
+    public void setBalance(double balance) {
+        Balance = balance;
+    }
+
+    public double getCommission() {
+        return Commission;
+    }
+
+    public void setCommission(double commission) {
+        Commission = commission;
+    }
+
+    public java.util.List<GoodsorderItem> getList() {
+        return List;
+    }
+
+    public void setList(java.util.List<GoodsorderItem> list) {
+        List = list;
     }
 
     public GoodsorderUser() {
-
     }
 
-    public GoodsorderUser(String pageCount, List<GoodsorderItem> list) {
+    public GoodsorderUser(String pageCount, double balance, double commission, java.util.List<GoodsorderItem> list) {
 
         PageCount = pageCount;
-        this.list = list;
+        Balance = balance;
+        Commission = commission;
+        List = list;
     }
 }

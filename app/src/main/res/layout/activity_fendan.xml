@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.BShopcar.FendanActivity"
+    android:background="#fff"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/x10"
+        android:paddingBottom="@dimen/x10"
+        android:background="#fff"
+        topbar:medtitle="分单结算"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x10"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@drawable/xiaofangzi"
+            android:id="@+id/imageView24" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="分开下单可以免税哦！"
+            android:textColor="#38ba44"
+            android:textSize="@dimen/x12"
+            android:layout_marginLeft="@dimen/x5"
+            android:id="@+id/textView79" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计:   "
+            android:textSize="@dimen/x12"
+            android:textColor="@color/individualblack"
+
+            android:id="@+id/textView83" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.00"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/x12"
+            android:id="@+id/fendan_money" />
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#fff"
+        android:dividerHeight="1dp"
+        android:id="@+id/fendan_list"
+        />
+
+</LinearLayout>

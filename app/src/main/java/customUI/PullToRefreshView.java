@@ -74,7 +74,6 @@ public class PullToRefreshView extends LinearLayout {
 	/**
 	 * header tip text
 	 */
-	private TextView mHeaderTextView;
 	/**
 	 * footer tip text
 	 */
@@ -83,6 +82,7 @@ public class PullToRefreshView extends LinearLayout {
 	 * header refresh time
 	 */
 	private TextView mHeaderUpdateTextView;
+	private TextView mHeaderTextView;
 	/**
 	 * footer refresh time
 	 */
@@ -128,6 +128,11 @@ public class PullToRefreshView extends LinearLayout {
 	 */
 	private OnHeaderRefreshListener mOnHeaderRefreshListener;
 
+	private String hasnoshowtext="下拉刷新";
+	private String hasshowtext="松开后刷新";
+
+	private String bottomhasnoshowtext="上拉加载更多";
+	private String bottomhasshowtext="松开后加载";
 	/**
 	 * last update time
 	 */
@@ -184,6 +189,12 @@ public class PullToRefreshView extends LinearLayout {
 		addView(mHeaderView, params);
 
 	}
+	public View getHeader(){
+		return mHeaderView;
+	}
+	public void setHeaderText(String text){
+		mHeaderTextView.setText(text);
+	}
 
 	private void addFooterView() {
 		// footer view
@@ -202,7 +213,12 @@ public class PullToRefreshView extends LinearLayout {
 		// 由于是线性布局可以直接添加,只要AdapterView的高度是MATCH_PARENT,那么footer view就会被添加到最后,并隐藏
 		addView(mFooterView, params);
 	}
-
+	public View getmFooterView(){
+		return mFooterView;
+	}
+	public void setfootText(String text){
+		mFooterTextView.setText(text);
+	}
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
@@ -224,13 +240,15 @@ public class PullToRefreshView extends LinearLayout {
 		View view = null;
 		for (int i = 0; i < count - 1; ++i) {
 			view = getChildAt(i);
-			if (view instanceof AdapterView<?>) {
-				mAdapterView = (AdapterView<?>) view;
-			}
 			if (view instanceof ScrollView) {
 				// finish later
 				mScrollView = (ScrollView) view;
+
 			}
+			if (view instanceof AdapterView<?>) {
+				mAdapterView = (AdapterView<?>) view;
+			}
+
 		}
 		if (mAdapterView == null && mScrollView == null) {
 			throw new IllegalArgumentException("must contain a AdapterView or ScrollView in this layout!");
@@ -404,11 +422,12 @@ public class PullToRefreshView extends LinearLayout {
 	 * @param deltaY
 	 *            ,手指滑动的距离
 	 */
+
 	private void headerPrepareToRefresh(int deltaY) {
 		int newTopMargin = changingHeaderViewTopMargin(deltaY);
 		// 当header view的topMargin>=0时，说明已经完全显示出来了,修改header view 的提示状态
 		if (newTopMargin >= 0 && mHeaderState != RELEASE_TO_REFRESH) {
-			mHeaderTextView.setText(R.string.pull_to_refresh_release_label);
+			mHeaderTextView.setText(hasshowtext);
 			mHeaderUpdateTextView.setVisibility(View.VISIBLE);
 			mHeaderImageView.clearAnimation();
 			mHeaderImageView.startAnimation(mFlipAnimation);
@@ -417,11 +436,20 @@ public class PullToRefreshView extends LinearLayout {
 			mHeaderImageView.clearAnimation();
 			mHeaderImageView.startAnimation(mFlipAnimation);
 			// mHeaderImageView.
-			mHeaderTextView.setText(R.string.pull_to_refresh_pull_label);
+			mHeaderTextView.setText(hasnoshowtext);
 			mHeaderState = PULL_TO_REFRESH;
 		}
 	}
+	public void setheaderChangeText(String[] t){
+		hasnoshowtext=t[0];
+		hasshowtext=t[1];
 
+	}
+	public void setfooterChangeText(String[] t){
+		bottomhasnoshowtext=t[0];
+		bottomhasshowtext=t[1];
+
+	}
 	/**
 	 * footer 准备刷新,手指移动过程,还没有释放 移动footer view高度同样和移动header view
 	 * 高度是一样，都是通过修改header view的topmargin的值来达到
@@ -434,14 +462,14 @@ public class PullToRefreshView extends LinearLayout {
 		// 如果header view topMargin 的绝对值大于或等于header + footer 的高度
 		// 说明footer view 完全显示出来了，修改footer view 的提示状态
 		if (Math.abs(newTopMargin) >= (mHeaderViewHeight + mFooterViewHeight) && mFooterState != RELEASE_TO_REFRESH) {
-			mFooterTextView.setText(R.string.pull_to_refresh_footer_release_label);
+			mFooterTextView.setText(bottomhasshowtext);
 			mFooterImageView.clearAnimation();
 			mFooterImageView.startAnimation(mFlipAnimation);
 			mFooterState = RELEASE_TO_REFRESH;
 		} else if (Math.abs(newTopMargin) < (mHeaderViewHeight + mFooterViewHeight)) {
 			mFooterImageView.clearAnimation();
 			mFooterImageView.startAnimation(mFlipAnimation);
-			mFooterTextView.setText(R.string.pull_to_refresh_footer_pull_label);
+			mFooterTextView.setText(bottomhasnoshowtext);
 			mFooterState = PULL_TO_REFRESH;
 		}
 	}

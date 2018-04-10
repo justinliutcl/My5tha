@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.transtion.my5th.R;
 
@@ -49,18 +50,22 @@ public class TBank extends Fragment {
             }
         });
     }
-    public void submit(){
-        loding.showloadingbutton();
-        String Account=account.getText().toString();
-        String Name=name.getText().toString();
-        String PayPwd=password.getText().toString();
-        String Amount=tmoney.getText().toString();
-        HttpConnectionUtil.getJsonJsonwithDialog(getActivity(), path, new String[]{"MemberId","Account","Name","PayPwd","WithdrawCashType","Amount"},
-                new String[]{share.getMemberID(),Account,Name,PayPwd,"1",Amount},loding, new HttpConnectionUtil.OnJsonCall() {
-            @Override
-            public void JsonCallBack(String str) {
-                loding.disloadingbutton("提现成功");
-            }
-        });
+    public void submit() {
+        String Account = account.getText().toString();
+        String Name = name.getText().toString();
+        String PayPwd = password.getText().toString();
+        String Amount = tmoney.getText().toString();
+        if (Account.length() < 16) {
+            Toast.makeText(getActivity(), "请输入正确银行卡号", Toast.LENGTH_SHORT).show();
+        } else {
+            loding.showloadingbutton();
+            HttpConnectionUtil.getJsonJsonwithDialog(getActivity(), path, new String[]{"MemberId", "Account", "Name", "PayPwd", "WithdrawCashType", "Amount"},
+                    new String[]{share.getMemberID(), Account, Name, PayPwd, "1", Amount}, loding, new HttpConnectionUtil.OnJsonCall() {
+                        @Override
+                        public void JsonCallBack(String str) {
+                            loding.disloadingbutton("申请已提交");
+                        }
+                    });
+        }
     }
 }

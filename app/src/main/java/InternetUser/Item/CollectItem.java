@@ -10,8 +10,17 @@ public class CollectItem {
     private String Title;
     private String ObjId;
     private double SellPrice;
-    private String Belong;
     private String LongTitle;
+    private String Belong;
+    private String Id;
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 
     public String getSrc() {
         return Src;

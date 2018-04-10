@@ -4,52 +4,26 @@ package InternetUser;
  * Created by baicai on 2016/2/24.
  */
 public class LoginUser {
-    private boolean IsSuccess;
-    private int Code;
-    private String Message;
-    private int Data;
+    private int Continuous;
+    private int TomorrowDrame;
 
-    public int getData() {
-        return Data;
+    public int getContinuous() {
+        return Continuous;
     }
 
-    public void setData(int data) {
-        Data = data;
+    public void setContinuous(int continuous) {
+        Continuous = continuous;
     }
 
-    public boolean isSuccess() {
-        return IsSuccess;
+    public int getTomorrowDrame() {
+        return TomorrowDrame;
     }
 
-    public LoginUser(boolean isSuccess, int code, String message,int data) {
-        IsSuccess = isSuccess;
-        Code = code;
-        Message = message;
-        Data=data;
+    public void setTomorrowDrame(int tomorrowDrame) {
+        TomorrowDrame = tomorrowDrame;
     }
 
     public LoginUser() {
 
-    }
-
-    public int getCode() {
-
-        return Code;
-    }
-
-    public void setCode(int code) {
-        Code = code;
-    }
-
-    public String getMessage() {
-        return Message;
-    }
-
-    public void setMessage(String message) {
-        Message = message;
-    }
-
-    public void setIsSuccess(boolean isSuccess) {
-        IsSuccess = isSuccess;
     }
 }

@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="2015-12-24"
                 android:id="@+id/adapter_gwb_day"
-                android:textSize="@dimen/x9"
+                android:textSize="@dimen/x10"
                 android:textColor="@color/main_sgry"
                 />
 
@@ -38,15 +38,15 @@
                 android:layout_height="wrap_content"
                 android:text="03:36:30"
                 android:id="@+id/adapter_gwb_time"
-                android:textSize="@dimen/x9"
+                android:textSize="@dimen/x10"
                 android:layout_marginTop="1dp"
                 android:textColor="@color/main_sgry"
                 />
         </LinearLayout>
 
         <TextView
-            android:layout_width="@dimen/x17"
-            android:layout_height="@dimen/x17"
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
             android:text="充"
             android:textSize="@dimen/x10"
             android:id="@+id/adapter_gwb_type"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="+100.00"
                 android:id="@+id/adapter_gwb_gwb"
-                android:textSize="@dimen/x11"
+                android:textSize="@dimen/x12"
                 android:textColor="@color/black"
                 android:layout_marginBottom="2dp"
                 />
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="第五大街充值卡（普通卡号：465283）兑换"
                 android:id="@+id/adapter_gwb_his"
-                android:textSize="@dimen/x9"
+                android:textSize="@dimen/x10"
                 android:singleLine="true"
                 android:textColor="@color/main_sgry"
                 />

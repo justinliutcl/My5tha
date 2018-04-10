@@ -26,21 +26,46 @@
         android:layout_height="1dp"
         android:background="#ddd"
         />
-
-    <customUI.PullToRefreshView
+    <customUI.CustomScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/collect_list"
-        android:orientation="vertical"
-        >
-        <ListView
-            android:layout_marginTop="@dimen/y5"
-            android:id="@+id/collect_listview"
-            android:cacheColorHint="#00000000"
-            android:divider="#e6e6e6"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:dividerHeight="1dp"
-            />
-    </customUI.PullToRefreshView>
+        android:background="#f5f5f5"
+        android:id="@+id/customScrollview" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <customUI.ListViewForScrollView
+                android:layout_marginTop="@dimen/y5"
+                android:id="@+id/collect_listview"
+                android:cacheColorHint="#00000000"
+                android:divider="#e6e6e6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:dividerHeight="1dp"
+                />
+            <LinearLayout
+                android:id="@+id/otherfrag_blin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/y10"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x12"
+                    android:textColor="#ccc"
+                    android:paddingTop="@dimen/y10"
+                    android:paddingBottom="@dimen/y10"
+                    android:layout_gravity="center"
+                    android:text="亲，别拉了，到底了哦 ^_^"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </customUI.CustomScrollView>
 </LinearLayout>

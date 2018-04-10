@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.AHomeActivity.SelectActivity"
+    android:background="#fff"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="选择分类"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <ScrollView
+        android:layout_width="@dimen/x80"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <customUI.ListViewForScrollView
+                android:id="@+id/select_lift"
+                android:layout_width="@dimen/x80"
+                android:layout_height="wrap_content"
+                android:divider="#ddd"
+                android:dividerHeight="1dp"
+                >
+            </customUI.ListViewForScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/select_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>
+</LinearLayout>

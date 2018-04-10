@@ -4,7 +4,7 @@
     xmlns:toggle="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.transtion.my5th.LoginActivity"
+    tools:context=".mActivity.LoginActivity"
     android:orientation="vertical"
     android:background="@color/background"
     >
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="登陆"
+            android:text="登录"
             android:layout_marginRight="5dp"
             android:layout_centerVertical="true"
             android:textColor="@color/main_color"
@@ -107,8 +107,9 @@
                         android:textColorHint="@color/hintcolor"
                         android:hint="请输入11位手机号"
                         android:padding="10dp"
+                        android:maxLength="11"
                         android:background="#fff"
-                        android:inputType="phone" >
+                        android:inputType="number" >
 
                     </EditText>
                     <Button
@@ -198,6 +199,8 @@
                         android:textColorHint="@color/hintcolor"
                         android:hint="设置6-16位登录密码"
                         android:padding="10dp"
+                        android:maxLength="16"
+                        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
                         android:background="#fff"
                         android:inputType="textPassword" >
 

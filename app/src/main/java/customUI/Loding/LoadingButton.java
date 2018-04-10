@@ -108,7 +108,7 @@ public class LoadingButton extends View {
         mFillCirclePaint = new Paint();
         mFillCirclePaint.setColor(0xffffffff);
         mFillCirclePaint.setStyle(Paint.Style.FILL);
-        mFillCirclePaint.setStrokeWidth(10);
+        mFillCirclePaint.setStrokeWidth(6);
         mFillCirclePaint.setAntiAlias(true);
 
         mCommonDrawable = getResources().getDrawable(R.drawable.loadingbuttondefault);
@@ -257,7 +257,7 @@ public class LoadingButton extends View {
         if (arcStartAngleOffset >= 360) {
             arcStartAngleOffset = 0;
         } else {
-            arcStartAngleOffset += 3;
+            arcStartAngleOffset += 6;
         }
         return arcStartAngleOffset;
     }

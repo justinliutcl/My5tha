@@ -6,13 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.transtion.my5th.DIndividualActivity.OrderdetailsActivity;
+import com.example.transtion.my5th.DIndividualActivity.Order.OrderdetailsActivity;
 import com.example.transtion.my5th.R;
 
 import InternetUser.GoodsorderUser;
+import adapter.Individual.AddressAdapter;
 import adapter.order.AllOrderAdapter;
 import customUI.Loding.ProgressWheel;
 import customUI.PullToRefreshView;
@@ -31,15 +33,20 @@ public class WaitDeliver extends BaseFragment implements PullToRefreshView.OnFoo
     PullToRefreshView refreshView;
     ListView list;
     public LodingUtil loding;
-    int now=1;
+    int now=2;
     int tatol;
     int orderType=3;
-    String path= Path.HOST+Path.ip+Path.ALLORDER_PATH;
+    String path= Path.HOST+Path.ip+Path.CHILDRENORDER_PATH;
     GoodsorderUser user;
     ShareUtil share=ShareUtil.getInstanse(getActivity());
     AllOrderAdapter adapter;
     int i=0;
     ProgressWheel progress;
+    boolean reflash=true;
+    public WaitDeliver(boolean flage) {
+        this.flage = flage;
+    }
+    LinearLayout orderNone;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,10 +55,10 @@ public class WaitDeliver extends BaseFragment implements PullToRefreshView.OnFoo
             share=ShareUtil.getInstanse(getActivity());
             refreshView= (PullToRefreshView) view.findViewById(R.id.myorder_list);
             list= (ListView) view.findViewById(R.id.myorder_listview);
+            orderNone= (LinearLayout) view.findViewById(R.id.myorder_ordernone);
             progress= (ProgressWheel) view.findViewById(R.id.progress);
             refreshView.setEnablePullTorefresh(false);
             loding=new LodingUtil(getActivity());
-            getJson();
         }
         ViewGroup parent = (ViewGroup) view.getParent();
         if (parent != null) {
@@ -61,26 +68,49 @@ public class WaitDeliver extends BaseFragment implements PullToRefreshView.OnFoo
         setListener();
         return view;
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(flage){
+            progress.setVisibility(View.VISIBLE);
+            refreshView.setVisibility(View.GONE);
+            getJson();
+            flage=false;
+        }
+
+    }
     private void setListener() {
         refreshView.setOnFooterRefreshListener(this);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                JumpUtil.jumpWithValue(getActivity(), OrderdetailsActivity.class, new String[]{"orderId"}, new String[]{user.getList().get(position).getOrderNumber()}, true);
+                JumpUtil.jumpWithValue(getActivity(), OrderdetailsActivity.class, new String[]{"orderId","type","orderstate"}, new String[]{user.getList().get(position).getOrderNumber(),user.getList().get(position).getOrderStatusString(),user.getList().get(position).getOrderStatus()}, true);
             }
         });
     }
 
     private void getJson() {
-        HttpConnectionUtil.getGetJsonWithProgress(getActivity(), path + "?MemberId=" + share.getMemberID() + "&orderType=" + orderType, progress, new HttpConnectionUtil.OnJsonCall() {
+        HttpConnectionUtil.getGetJsonWithProgressOnerror(getActivity(), path + "?MemberId=" + share.getMemberID() + "&orderType=" + orderType, progress, new HttpConnectionUtil.OnJsonCall() {
             @Override
             public void JsonCallBack(String str) {
+                orderNone.setVisibility(View.GONE);
                 progress.setVisibility(View.GONE);
-                list.setVisibility(View.VISIBLE);
+                refreshView.setVisibility(View.VISIBLE);
                 user = HttpConnectionUtil.getGoodsorderUser(str);
-                adapter = new AllOrderAdapter(user, getActivity());
+                adapter = new AllOrderAdapter(user, getActivity(), loding, new AddressAdapter.OnadapterChangeCall() {
+                    @Override
+                    public void adapterChangeBack(int position) {
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+                tatol = Integer.parseInt(user.getPageCount());
                 list.setAdapter(adapter);
                 loding.disShapeLoding();
+            }
+        }, new HttpConnectionUtil.OnErrorJsonCall() {
+            @Override
+            public void JsonCallBack(String str) {
+                orderNone.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -100,15 +130,16 @@ public class WaitDeliver extends BaseFragment implements PullToRefreshView.OnFoo
     }
     @Override
     public void onFooterRefresh(PullToRefreshView view) {
-        if(now<tatol)
+        if(now<=tatol)
             refresh();
         else{
-            Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();
-            refreshView.onFooterRefreshComplete();
+            if(reflash){
+                Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();
+                refreshView.onFooterRefreshComplete();
+                refreshView.getmFooterView().setVisibility(View.INVISIBLE);
+                reflash=false;
+            }
         }
     }
 
-    @Override
-    protected void lazyLoad() {
-    }
 }

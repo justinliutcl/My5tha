@@ -14,7 +14,25 @@ public class AddressItem {
     private String Province;
     private String City;
     private String Area;
+    private String CityCode;
+    private String ProvinceCode;
     private String AreaCode;
+
+    public String getCityCode() {
+        return CityCode;
+    }
+
+    public void setCityCode(String cityCode) {
+        CityCode = cityCode;
+    }
+
+    public String getProvinceCode() {
+        return ProvinceCode;
+    }
+
+    public void setProvinceCode(String provinceCode) {
+        ProvinceCode = provinceCode;
+    }
 
     public String getIdCard() {
         return IdCard;

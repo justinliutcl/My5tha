@@ -1,6 +1,5 @@
 package fifthutil;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.view.View;
 
@@ -13,7 +12,6 @@ import customUI.Loding.LoadingDialog;
  */
 public class LodingUtil {
 //   private ShapeLoadingDialog shapeLoadingDialog;
-    private AlertDialog mDialog;
     private LoadingDialog dialog;
 
     private View mDialogContentView;

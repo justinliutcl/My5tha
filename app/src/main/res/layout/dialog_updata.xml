@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    >
+    <LinearLayout
+        android:id="@+id/umeng_update_frame"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#fff"
+        android:paddingBottom="8dp"
+        android:padding="@dimen/x5"
+        android:orientation="vertical" >
+
+        <!-- Title -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="发现新版本"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/x20"
+                />
+
+
+        </RelativeLayout>
+
+        <!-- split -->
+
+        <ProgressBar
+            android:id="@+id/dialog_updata_prograssbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:progress="100"
+            android:progressDrawable="@drawable/updataprograssbar_back"
+            />
+        <!-- Content -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/dialog_updata_version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="1231231231231"
+                    android:focusable="true"
+                    android:textColor="@color/main_gry" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="25dp"
+                    android:text="更新内容"
+                    android:textSize="@dimen/x12"
+                    android:focusable="true"
+                    android:textColor="@color/main_gry" />
+                <TextView
+                    android:id="@+id/dialog_updata_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="1,版本.2,更新说明1.1"
+                    android:focusable="true"
+                    android:textSize="@dimen/x11"
+                    android:textColor="@color/main_gry" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Ignore CheckBox -->
+
+
+        <!-- OK&Cancel Button -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x40"
+            >
+
+            <Button
+                android:id="@+id/dialog_updata_commit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/main_color"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="立即更新"
+                android:minHeight="0dp"
+                android:textSize="@dimen/x12"
+                android:focusable="true"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/dialog_updata_after"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#e6e6e6"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="以后再说"
+                android:minHeight="0dp"
+                android:focusable="true"
+                android:textSize="@dimen/x12"
+                android:textColor="#000" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

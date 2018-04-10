@@ -84,8 +84,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	private int scrollOffset = 52;
 	private int indicatorHeight = 8;
 	private int underlineHeight = 2;
-	private int dividerPadding = 12;
-	private int tabPadding = 24;
+	private int dividerPadding = 10;
+	private int tabPadding = 13;
 	private int dividerWidth = 1;
 
 	private int tabTextSize = 12;

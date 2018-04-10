@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.transtion.my5th.DIndividualActivity.ChonglineActivity"
+    tools:context=".DIndividualActivity.MyWallet.ChonglineActivity"
     android:orientation="vertical"
     xmlns:topbar="http://schemas.android.com/apk/res-auto"
     android:background="@color/background"
@@ -74,7 +74,7 @@
                     android:hint="请输入充值金额"
                     android:padding="10dp"
                     android:background="#fff"
-                    android:inputType="phone" >
+                    android:inputType="number" >
 
                 </EditText>
             </LinearLayout>
@@ -129,8 +129,6 @@
                 android:paddingBottom="10dp"
                 android:paddingRight="14dp"
                 android:background="#ffffff"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:gravity="center_vertical"
                 android:id="@+id/chongonline_layout_alipy">
                 <ImageView
@@ -152,7 +150,7 @@
 
                         android:textColor="@color/black"
                         android:textSize="@dimen/thirteen"
-                        android:text="请选择支付方式"
+                        android:text="支付宝支付"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -167,7 +165,7 @@
                 <ImageView
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x20"
-                    android:src="@drawable/bg_radio_on3x"
+                    android:background="@drawable/bg_radio_on3x"
                     android:id="@+id/chongonline_img_alipy" />
 
             </LinearLayout>
@@ -187,8 +185,6 @@
                 android:paddingBottom="10dp"
                 android:paddingRight="14dp"
                 android:background="#ffffff"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:gravity="center_vertical"
                 android:id="@+id/chongonline_layout_wepay">
                 <ImageView
@@ -225,7 +221,7 @@
                 <ImageView
                     android:layout_width="@dimen/x20"
                     android:layout_height="@dimen/x20"
-                    android:src="@drawable/bg_radio3x"
+                    android:background="@drawable/bg_radio3x"
                     android:id="@+id/chongonline_img_wepay" />
 
             </LinearLayout>

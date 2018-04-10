@@ -1,10 +1,16 @@
 package fragment;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,30 +19,40 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.transtion.my5th.AHomeActivity.MessageActivity;
 import com.example.transtion.my5th.DIndividualActivity.AddressmanagerActivity;
 import com.example.transtion.my5th.DIndividualActivity.CollectActivity;
-import com.example.transtion.my5th.DIndividualActivity.DMAcoupon;
-import com.example.transtion.my5th.DIndividualActivity.DMAgodActivity;
-import com.example.transtion.my5th.DIndividualActivity.DMAgwbActivity;
-import com.example.transtion.my5th.DIndividualActivity.DMAtravelActivity;
-import com.example.transtion.my5th.DIndividualActivity.DSAllActivity;
+import com.example.transtion.my5th.DIndividualActivity.MyWallet.Commision.DMAgodActivity;
+import com.example.transtion.my5th.DIndividualActivity.MyWallet.DMAcoupon;
+import com.example.transtion.my5th.DIndividualActivity.MyWallet.DMAtravelActivity;
+import com.example.transtion.my5th.DIndividualActivity.MyWallet.DWdqbActivity;
+import com.example.transtion.my5th.DIndividualActivity.MyWallet.GWB.DMAgwbActivity;
+import com.example.transtion.my5th.DIndividualActivity.Order.DSAllActivity;
 import com.example.transtion.my5th.DIndividualActivity.PopulazeActivity;
-import com.example.transtion.my5th.Setting.DSetingActivity;
-import com.example.transtion.my5th.DIndividualActivity.DWdqbActivity;
+import com.example.transtion.my5th.DIndividualActivity.Shimingshow;
+import com.example.transtion.my5th.DIndividualActivity.TuijianActivity;
 import com.example.transtion.my5th.R;
+import com.example.transtion.my5th.Setting.DSetingActivity;
 import com.example.transtion.my5th.Setting.MysetingActivity;
-import com.example.transtion.my5th.SignActivity;
+import com.example.transtion.my5th.mActivity.SignActivity;
+import com.lidroid.xutils.BitmapUtils;
+import com.lidroid.xutils.bitmap.BitmapDisplayConfig;
+import com.lidroid.xutils.bitmap.callback.BitmapLoadFrom;
+import com.lidroid.xutils.bitmap.callback.DefaultBitmapLoadCallBack;
+
+import java.util.List;
 
 import InternetUser.IndividualHost;
 import InternetUser.LoginUser;
 import customUI.MyImageView;
+import fifthutil.FifUtil;
 import fifthutil.ImageUtil;
 import fifthutil.JumpUtil;
 import fifthutil.LodingUtil;
 import fifthutil.OptsBitmapUtil;
 import fifthutil.PhotoSelectUtil;
-import fifthutil.cache.BitmapUtil;
 import httpConnection.HttpConnectionUtil;
 import httpConnection.Path;
 import sharedPreferencesUtil.ShareUtil;
@@ -53,8 +69,8 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
 
     Button exit;
 
-    LinearLayout layout_set, layout_address, layout_popularized, layout_collect, layout_sign,layout_signmes, layout_signmesnor,
-            layout_shopmoney,layout_commission,layout_travelmoneySum,layout_coupon,layout_wdqb,layout_allorder,layout_title;
+    LinearLayout layout_set, layout_address, layout_popularized, layout_collect,layout_tuijian, layout_sign,layout_signmes, layout_signmesnor,
+            layout_shopmoney,layout_commission,layout_travelmoneySum,layout_coupon,layout_wdqb,layout_allorder,layout_title,layout_notification,layout_realname,layout_zhongjiang;
 
     FrameLayout layout_shoukuan,layout_fahuo,layout_shouhuo,layout_pingjia;
 
@@ -71,6 +87,9 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
 
     String individualHostPath=Path.HOST+Path.ip+Path.INDIVIDUAL_PATH;
     String individualSign=Path.HOST+Path.ip+Path.SIGN_PATH;
+
+    AlertDialog ad;
+    String path;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -79,7 +98,6 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
         userImg= (MyImageView) view.findViewById(R.id.individual_userimg);
 
         myseting= (ImageView) view.findViewById(R.id.individual_myseting);
-
         name= (TextView) view.findViewById(R.id.individual_name);
         type= (TextView) view.findViewById(R.id.individual_type);
         csiday= (TextView) view.findViewById(R.id.individual_CSIday);
@@ -107,6 +125,10 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
         layout_popularized = (LinearLayout) view.findViewById(R.id.individual_layout_popularize);
         layout_collect = (LinearLayout) view.findViewById(R.id.individual_layout_collect);
         layout_title = (LinearLayout) view.findViewById(R.id.individual_layout_title);
+        layout_tuijian= (LinearLayout) view.findViewById(R.id.individual_layout_tuijian);
+        layout_notification= (LinearLayout) view.findViewById(R.id.individual_layout_notificationservice);
+        layout_realname= (LinearLayout) view.findViewById(R.id.individual_layout_realname);
+        layout_zhongjiang= (LinearLayout) view.findViewById(R.id.individual_layout_zhongjiang);
 
         layout_sign= (LinearLayout) view.findViewById(R.id.individual_layout_sign);
 
@@ -123,19 +145,42 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
         layout_pingjia= (FrameLayout) view.findViewById(R.id.individual_layout_pingjianum);
 
         share=ShareUtil.getInstanse(getActivity());
-        memberid=share.getMemberID();
-
+        loading=new LodingUtil(getActivity());
         photoUtil=new PhotoSelectUtil(getActivity(),this);
-
+        memberid=share.getMemberID();
         shoukuanSum.setVisibility(View.GONE);
         fahuoSum.setVisibility(View.GONE);
         shouhuoSum.setVisibility(View.GONE);
         pingjiaSum.setVisibility(View.GONE);
-        loading=new LodingUtil(getActivity());
+        setDialog();
         setListener();
         return view;
     }
-
+    public void setDialog(){
+        AlertDialog.Builder ab=new AlertDialog.Builder(getActivity(), R.style.dialog);
+        View view=View.inflate(getActivity(),R.layout.dialog_callservice,null);
+        LinearLayout phone= (LinearLayout) view.findViewById(R.id.dialog_callservice_layout_phone);
+        LinearLayout qq= (LinearLayout) view.findViewById(R.id.dialog_callservice_layout_qq);
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callphone();
+                ad.dismiss();
+            }
+        });
+        qq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                notificationService(1003986666);
+                ad.dismiss();
+            }
+        });
+        ab.setView(view);
+        ad=ab.create();
+        ad.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        ad.getWindow().setWindowAnimations(R.style.dialog_updown_anim);
+        ad.getWindow().setGravity(Gravity.CENTER);
+    }
     @Override
     public void onResume() {
         super.onResume();
@@ -175,6 +220,10 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
         exit.setOnClickListener(this);
         myseting.setOnClickListener(this);
         layout_title.setOnClickListener(this);
+        layout_tuijian.setOnClickListener(this);
+        layout_notification.setOnClickListener(this);
+        layout_realname.setOnClickListener(this);
+        layout_zhongjiang.setOnClickListener(this);
     }
 
     private void getJson() {
@@ -188,17 +237,36 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
             }
         });
     }
+    public class tt extends
+            DefaultBitmapLoadCallBack<ImageView> {
 
+        @Override
+        public void onLoading(ImageView container, String uri,
+                              BitmapDisplayConfig config, long total, long current) {
+        }
+
+        @Override
+        public void onLoadCompleted(ImageView container, String uri,
+                                    Bitmap bitmap, BitmapDisplayConfig config, BitmapLoadFrom from) {
+            // super.onLoadCompleted(container, uri, bitmap, config, from);
+            userImg.setImageBitmap(bitmap);
+            FifUtil.saveMyBitmap(path, bitmap, getActivity());
+        }
+
+        @Override
+        public void onLoadFailed(ImageView container, String uri,
+                                 Drawable drawable) {
+            // TODO Auto-generated method stub
+        }
+    }
     private void getimg(String url){
-        userImg.setTag(url);
-        BitmapUtil.setImg(userImg);
-//        HttpConnectionUtil.getGetImg(getActivity(), , new HttpConnectionUtil.OnimgCall() {
-//            @Override
-//            public void imgCallBack(Bitmap bitmap) {
-//                userImg.setImageBitmap(bitmap);
-//                share.setImgUrl(url);
-//            }
-//        });
+        path=url;
+        ImageUtil imageUtil=new ImageUtil(getActivity());
+        BitmapUtils bitmapUtils=imageUtil.getBitmapUtils();
+        bitmapUtils.display(userImg, url, new tt());
+
+//        userImg.setTag(url);
+//        bitmapUtil.setImg(userImg);
     }
 
     private void setView(String str) {
@@ -227,8 +295,8 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
             getimg("http:"+host.getMemberAvatarImg());
         csiday.setText(host.getContinuous());
         travelMoney.setText(host.getTomorrowDrame());
-        shopmoney.setText(host.getMyGwb()+"");
-        commission.setText(host.getMyCommission()+"");
+        shopmoney.setText(host.getMyGwb() + "");
+        commission.setText(host.getMyCommission() + "");
         travelMoneySum.setText(host.getDreamFund());
         coupon.setText(host.getMyCouponsNum());
         name.setText(host.getNickName());
@@ -249,7 +317,7 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
         showNum(host.getUnpaidNumber(), shoukuanSum);
         showNum(host.getUnDeliveryNumber(), fahuoSum);
         showNum(host.getUnReceiveNumber(), shouhuoSum);
-        showNum(host.getMyShareThreaNum(), pingjiaSum);
+        showNum(host.getUnShareNumber(), pingjiaSum);
         loading.disShapeLoding();
     }
 
@@ -296,10 +364,10 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
                 JumpUtil.jumpWithValue(getActivity(), DSAllActivity.class,new String[]{"count"},new String[]{"1"},true);
                 break;
             case R.id.individual_layout_fahuonum:
-                JumpUtil.jumpWithValue(getActivity(), DSAllActivity.class,new String[]{"count"},new String[]{"3"},true);
+                JumpUtil.jumpWithValue(getActivity(), DSAllActivity.class,new String[]{"count"},new String[]{"2"},true);
                 break;
             case R.id.individual_layout_shouhuonum:
-                JumpUtil.jumpWithValue(getActivity(), DSAllActivity.class,new String[]{"count"},new String[]{"2"},true);
+                JumpUtil.jumpWithValue(getActivity(), DSAllActivity.class,new String[]{"count"},new String[]{"3"},true);
                 break;
             case R.id.individual_layout_pingjianum:
                 JumpUtil.jumpWithValue(getActivity(), DSAllActivity.class, new String[]{"count"}, new String[]{"4"}, true);
@@ -328,6 +396,18 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
                 util.clear();
                 JumpUtil.jump2hdown(getActivity(), SignActivity.class,true);
                 break;
+            case R.id.individual_layout_tuijian:
+                JumpUtil.jumpWithValue(getActivity(), TuijianActivity.class, new String[]{"flage", "code"}, new String[]{host.isRefMember() ? "1" : "2", host.getEncryptMemberId()}, true);
+                break;
+            case R.id.individual_layout_notificationservice:
+                ad.show();
+                break;
+            case R.id.individual_layout_realname:
+                JumpUtil.jump(getActivity(), Shimingshow.class, true);
+                break;
+            case R.id.individual_layout_zhongjiang:
+                JumpUtil.jump(getActivity(), MessageActivity.class, true);
+                break;
             default:
                 break;
         }
@@ -347,40 +427,52 @@ public class DIndividualfrag extends Fragment implements View.OnClickListener{
         });
     }
 
+    private void notificationService(int num){
+        String url="mqqwpa://im/chat?chat_type=wpa&uin="+num;
+        PackageManager packageManager = getActivity().getPackageManager();
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        List resolveInfo = packageManager.queryIntentActivities(intent, PackageManager.GET_INTENT_FILTERS);
+        if(resolveInfo.size() == 0){
+            Toast.makeText(getActivity(),"未安装qq，请下载后再与客服联系",Toast.LENGTH_SHORT).show();
+        }else{
+            startActivity(intent);
+        }
+
+    }
+
+    private void callphone(){
+        Uri uri = Uri.parse("tel:400-097-9992");
+        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+        startActivity(intent);
+    }
+
     public void dojson(String str){
         LoginUser lu=HttpConnectionUtil.getLoginMes(str);
         layout_signmesnor.setVisibility(View.GONE);
         layout_signmes.setVisibility(View.VISIBLE);
-        signday.setText((Integer.parseInt(host.getContinuous()) + lu.getData()) + "");
+        signday.setText(lu.getContinuous() + "");
         signday.setVisibility(View.VISIBLE);
         signdayleft.setText("已签到");
         signdayright.setVisibility(View.VISIBLE);
-
-        csiday.setText((Integer.parseInt(host.getContinuous())+lu.getData())+"");
-        switch (lu.getData()){
-            case 2:
-                travelMoney.setText("3");
-                break;
-            case 3:
-                travelMoney.setText("7");
-                break;
-            case 7:
-                travelMoney.setText("8");
-                break;
-            case 8:
-                travelMoney.setText("9");
-                break;
-            case 9:
-                travelMoney.setText("10");
-                break;
-            case 10:
-                travelMoney.setText("10");
-                break;
+        travelMoney.setText(lu.getTomorrowDrame() + "");
+        csiday.setText(lu.getContinuous() + "");
+        double b=Double.parseDouble(host.getDreamFund()) + Double.parseDouble(host.getTomorrowDrame());
+        int a=(int)b;
+        if(a==b){
+            travelMoneySum.setText(Integer.parseInt(host.getDreamFund())+ Integer.parseInt(host.getTomorrowDrame())+"");
+        }else{
+            travelMoneySum.setText(FifUtil.getPrice(Double.parseDouble(host.getDreamFund()) + Double.parseDouble(host.getTomorrowDrame())));
         }
-
-
         layout_sign.setClickable(false);
     }
+
+    public void call(String num){
+        Uri uri = Uri.parse("tel:"+num);
+        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+        startActivity(intent);
+    }
+
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

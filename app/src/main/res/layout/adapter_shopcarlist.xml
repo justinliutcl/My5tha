@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:id="@+id/shopcar_bottom_layout"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x13"
+            android:paddingTop="@dimen/x7"
+            android:paddingBottom="@dimen/x7"
+            android:gravity="center_vertical"
+
+            >
+
+            <ImageView
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:background="@drawable/bg_radio3x"
+                android:id="@+id/shopcar_bottom_select" />
+
+            <ImageView
+                android:layout_width="@dimen/x16"
+                android:layout_height="@dimen/x16"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@drawable/jisubaoshui"
+                android:id="@+id/imageView21" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="独家自营"
+                android:layout_marginLeft="@dimen/x5"
+                android:textSize="@dimen/x12"
+                android:layout_gravity="bottom"
+                android:textColor="@color/individualblack"
+                android:id="@+id/textView51" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ddd"
+            />
+        <customUI.ListViewForScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#ddd"
+            android:dividerHeight="1dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/x15"
+            android:paddingBottom="@dimen/x10"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="关税："
+                    android:textColor="@color/main_gry"
+                    />
+                <TextView
+                    android:id="@+id/shopcar_bottom_guanshui"
+                    android:layout_width="@dimen/x63"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="￥0.00"
+                    android:textColor="@color/main_gry"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="运费："
+                    android:textColor="@color/main_gry"
+                    />
+                <TextView
+                    android:layout_width="@dimen/x63"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="￥0.00"
+                    android:textColor="@color/main_gry"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="合计："
+                    android:textColor="@color/main_gry"
+                    />
+                <TextView
+                    android:id="@+id/shopcar_bottom_totalmoney"
+                    android:layout_width="@dimen/x63"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x10"
+                    android:text="￥0.00"
+                    android:textColor="@color/main_color"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

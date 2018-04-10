@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.BShopcar.LogisticActivity"
+    android:orientation="vertical"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="物流中心"
+        topbar:left_size="30dp"
+        topbar:left_hsize="20dp"
+        topbar:title_size="@dimen/title_size"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x15"
+        android:background="#fff"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/x14"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x10"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物流公司      "
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/x13"
+                    android:id="@+id/textView98" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/x13"
+                    android:id="@+id/logistic_company" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x5"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运单编号："
+                    android:textColor="@color/main_sgry"
+                    android:textSize="@dimen/x11"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/main_sgry"
+                    android:textSize="@dimen/x11"
+                    android:id="@+id/logistic_number" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x5"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发货时间："
+                    android:textColor="@color/main_sgry"
+                    android:textSize="@dimen/x11"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/main_sgry"
+                    android:textSize="@dimen/x11"
+                    android:id="@+id/logistic_time" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/x38"
+            android:layout_height="@dimen/x38"
+            android:layout_marginRight="@dimen/x11"
+            android:background="@drawable/logistic"
+            android:layout_gravity="bottom"
+            android:id="@+id/imageView28" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="物流追踪"
+        android:textSize="@dimen/x13"
+        android:textColor="@color/individualblack"
+        android:padding="@dimen/x14"
+        android:background="#fff"
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/textView100" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        android:id="@+id/textView102" />
+    <ListView
+        android:id="@+id/logistic_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#fff"
+        android:background="#fff"
+        android:dividerHeight="0dp"
+        android:paddingTop="@dimen/x10"
+        >
+
+    </ListView>
+</LinearLayout>

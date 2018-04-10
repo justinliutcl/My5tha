@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DIndividualActivity.DWdqbActivity"
+    tools:context=".DIndividualActivity.MyWallet.DWdqbActivity"
     android:background="@color/background"
     xmlns:topbar="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -37,9 +37,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="总购物币（元）"
+        android:text="总购物币(元)"
         android:textColor="@color/IndividualSgray"
-        android:textSize="9dp"
+        android:textSize="@dimen/x10"
         />
         <TextView
             android:id="@+id/wdqb_gwb"

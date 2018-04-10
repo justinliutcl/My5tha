@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DIndividualActivity.DMAgodActivity"
+    tools:context=".DIndividualActivity.MyWallet.Commision.DMAgodActivity"
     android:background="@color/background"
     xmlns:topbar="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:layout_marginTop="@dimen/y9"
-            android:layout_marginBottom="@dimen/y20"
+            android:layout_marginBottom="@dimen/y15"
             >
 
             <TextView
@@ -103,6 +103,21 @@
                 android:textSize="@dimen/x10"
                 android:id="@+id/textView16" />
         </LinearLayout>
+        <Button
+            android:id="@+id/individual_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonback"
+            android:minHeight="0dp"
+            android:paddingTop="@dimen/x6"
+            android:paddingBottom="@dimen/x6"
+            android:paddingLeft="@dimen/x25"
+            android:paddingRight="@dimen/x25"
+            android:layout_marginBottom="@dimen/x10"
+            android:text="我要推荐"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/x12" />
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
@@ -156,6 +171,36 @@
             android:layout_marginLeft="@dimen/x5"
             android:layout_weight="1"
             android:text="佣金收入"
+            android:textColor="@color/blackinwhite"
+            android:textSize="@dimen/x14" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        />
+    <LinearLayout
+        android:id="@+id/community_layout_waitshouru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="待收入佣金"
             android:textColor="@color/blackinwhite"
             android:textSize="@dimen/x14" />
 

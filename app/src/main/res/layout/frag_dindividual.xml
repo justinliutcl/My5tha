@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
-
         >
 
         <TextView
@@ -37,7 +36,9 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,7 +71,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_centerInParent="true"
-                        android:src="@drawable/hugh" />
+                        android:src="@drawable/defineimg" />
 
                 </RelativeLayout>
 
@@ -87,7 +88,7 @@
                         android:layout_height="wrap_content"
                        android:layout_width="wrap_content"
 
-                        android:text="哆啦A梦"
+                        android:text=""
                         android:textColor="#fff"
                         android:textSize="@dimen/individualmaxsize" />
                     <TextView
@@ -160,7 +161,6 @@
                             android:layout_height="wrap_content"
                             android:text="1"
                             android:textColor="@color/main_color"
-                            android:textStyle="bold"
                             android:textSize="@dimen/x15" />
 
                         <TextView
@@ -503,7 +503,7 @@
                     android:layout_width="@dimen/x15"
                     android:layout_height="@dimen/x15"
                     android:layout_marginLeft="5dp"
-                    android:src="@drawable/icon_money3x" />
+                    android:src="@drawable/icon_order2x" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -571,7 +571,7 @@
                         android:layout_height="@dimen/x17"
                         android:layout_gravity="right"
                         android:layout_marginRight="@dimen/x13"
-                        android:text="1"
+                        android:text=""
                         android:padding="0dp"
                         android:background="@drawable/red_crollnum"
                         android:textSize="@dimen/x10"
@@ -615,7 +615,7 @@
                         android:layout_height="@dimen/x17"
                         android:layout_gravity="right"
                         android:layout_marginRight="@dimen/x13"
-                        android:text="11"
+                        android:text=""
                         android:gravity="center"
                         android:padding="0dp"
                         android:background="@drawable/red_crollnum"
@@ -660,7 +660,7 @@
                         android:padding="0dp"
                         android:background="@drawable/red_crollnum"
                         android:textSize="@dimen/x10"
-                        android:text="11"
+                        android:text=""
                         android:gravity="center"
                         android:textColor="@color/main_color"
                         android:visibility="visible" />
@@ -700,7 +700,7 @@
                             android:padding="0dp"
                             android:background="@drawable/red_crollnum"
                             android:textSize="@dimen/x10"
-                            android:text="1"
+                            android:text=""
                             android:layout_gravity="right"
                             android:gravity="center"
                             android:textColor="@color/main_color"
@@ -742,6 +742,41 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:text="个人设置"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+            <LinearLayout
+                android:id="@+id/individual_layout_zhongjiang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_in_winning2x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="中奖记录"
                     android:textColor="@color/individualblack"
                     android:textSize="@dimen/individualmedsize" />
 
@@ -841,6 +876,7 @@
                 android:background="#fff"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/individualmargintop"
                 android:padding="10dp">
 
                 <ImageView
@@ -864,6 +900,113 @@
                     android:layout_height="11dp"
                     android:src="@drawable/icon_arroew_gray3x" />
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+
+
+            <LinearLayout
+                android:id="@+id/individual_layout_realname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_in_certification2x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="实名认证"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+            <LinearLayout
+                android:id="@+id/individual_layout_tuijian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="@dimen/individualmargintop">
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_in_recommend2x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="推荐好友"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayline" />
+            <LinearLayout
+                android:id="@+id/individual_layout_notificationservice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="@dimen/x20">
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_in_service2x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="联系客服"
+                    android:textColor="@color/individualblack"
+                    android:textSize="@dimen/individualmedsize" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:src="@drawable/icon_arroew_gray3x" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -877,7 +1020,9 @@
                 android:paddingBottom="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                >
 
                 <Button
                     android:id="@+id/individual_exit"

@@ -4,12 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.transtion.my5th.BaseActivity;
 import com.example.transtion.my5th.R;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 
 import InternetUser.AllHost;
 import fifthutil.ImageUtil;
-import fifthutil.cache.BitmapUtil;
 import httpConnection.HttpConnectionUtil;
 import httpConnection.Path;
 
@@ -37,8 +36,7 @@ public class PopulazeActivity extends BaseActivity {
             @Override
             public void JsonCallBack(String str) {
                 host= HttpConnectionUtil.getAllHost(str);
-                img.setTag("https:"+host.getData());
-                BitmapUtil.setImage(img);
+                imageUtil.display(img, host.getData());
                 loding.dismiss();
             }
         });

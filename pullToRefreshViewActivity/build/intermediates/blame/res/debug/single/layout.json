@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\test_listview.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\test_listview.xml"
+    },
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_header.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\refresh_header.xml"
+    },
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\grid_item.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\grid_item.xml"
+    },
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_footer.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\refresh_footer.xml"
+    },
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\test_scrollview.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\test_scrollview.xml"
+    },
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\test_gridview.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\test_gridview.xml"
+    },
+    {
+        "merged": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "F:\\studiowork2\\My5th3\\pullToRefreshViewActivity\\src\\main\\res\\layout\\main.xml"
+    }
+]

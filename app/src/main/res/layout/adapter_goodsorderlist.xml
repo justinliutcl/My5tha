@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/y15"
+        android:paddingLeft="@dimen/x15"
+        android:paddingRight="@dimen/x15"
+        android:paddingBottom="@dimen/x5"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x53"
+            android:layout_height="@dimen/x53"
+            android:background="@drawable/grayandwhite_noricepe"
+            android:padding="2dp"
+            android:id="@+id/linearlayout_orderlist_img" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_marginRight="@dimen/x29"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NewTextttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/individualblack"
+                android:lines="2"
+                android:ellipsize="end"
+                android:id="@+id/linearlayout_orderlist_mes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/main_gry"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/y8"
+                android:id="@+id/linearlayout_orderlist_attr" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="￥59.00"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/individualblack"
+                android:id="@+id/linearlayout_orderlist_money" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="×2"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/main_gry"
+                android:layout_gravity="right"
+                android:id="@+id/linearlayout_orderlist_sum" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我要晒单"
+        android:textSize="@dimen/x10"
+        android:background="@drawable/buttonback"
+        android:textColor="#fff"
+        android:padding="@dimen/x5"
+        android:layout_marginTop="@dimen/x10"
+        android:visibility="gone"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/x10"
+        android:id="@+id/linearlayout_orderlist_seeorder" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/textView32" />
+</LinearLayout>

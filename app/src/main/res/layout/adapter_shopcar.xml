@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingBottom="@dimen/x15"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x15"
+        android:paddingBottom="@dimen/y5"
+        android:paddingTop="@dimen/y13"
+        >
+        <ImageView
+            android:id="@+id/adaptershopcar_select"
+            android:layout_width="@dimen/x16"
+            android:layout_height="@dimen/x16"
+            android:background="@drawable/bg_radio3x"
+            android:layout_gravity="center_vertical"
+            />
+        <ImageView
+            android:layout_width="@dimen/x75"
+            android:layout_height="@dimen/x75"
+            android:background="@drawable/grayandwhite_noricepe"
+            android:padding="2dp"
+            android:layout_marginLeft="@dimen/x6"
+            android:id="@+id/adaptershopcar_img" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/y5"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x8"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="轨道积木电动轨道火车"
+                android:textSize="@dimen/x12"
+                android:textColor="#333"
+                android:id="@+id/adaptershopcar_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="本恩施 轨道积木电动车 火车套装yi次"
+                android:textSize="@dimen/x10"
+                android:lines="2"
+                android:ellipsize="end"
+                android:textColor="@color/main_gry"
+                android:layout_marginTop="5dp"
+                android:id="@+id/adaptershopcar_mes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥59.00"
+                android:layout_gravity="bottom"
+                android:textSize="@dimen/forteen"
+                android:textColor="#ff0090"
+                android:id="@+id/adaptershopcar_price" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x30"
+            android:paddingLeft="@dimen/x10"
+            android:paddingBottom="@dimen/x10"
+            android:paddingRight="@dimen/x15"
+            android:src="@drawable/icon_ashbin2x"
+            android:id="@+id/adaptershopcar_delete" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/x37"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ddd"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ddd"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:background="@drawable/jianfang"
+                android:id="@+id/adaptershopcar_jian" />
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ddd"
+                />
+
+            <TextView
+                android:layout_width="@dimen/x35"
+                android:layout_height="@dimen/x18"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/main_gry"
+                android:id="@+id/adaptershopcar_num" />
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ddd"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:background="@drawable/jiafang_no"
+                android:id="@+id/adaptershopcar_jia" />
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ddd"
+                android:id="@+id/textView49" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ddd"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.DIndividualActivity.TuijianActivity"
+    android:background="#f5f5f5"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="推荐好友"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/x10"
+        android:paddingBottom="@dimen/x10"
+        >
+
+        <LinearLayout
+            android:id="@+id/tuijian_layout_erweima"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:background="@drawable/pic_twocode"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的二维码"
+                android:textColor="@color/individualblack"
+                android:textSize="@dimen/x14"
+                android:layout_marginTop="@dimen/x2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫一扫，推荐好友"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/x11"
+                android:layout_marginTop="@dimen/x4"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="@dimen/x35"
+            android:background="#eee"
+            android:id="@+id/textView86" />
+        <LinearLayout
+            android:id="@+id/tuijian_hongbao"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:background="@drawable/pic_hb"
+                android:id="@+id/imageView25" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的红包"
+                android:textColor="@color/individualblack"
+                android:textSize="@dimen/x14"
+                android:layout_marginTop="@dimen/x2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享红包至朋友圈"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/x11"
+                android:layout_marginTop="@dimen/x4"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline"
+        android:layout_marginTop="@dimen/x10"
+        />
+
+    <LinearLayout
+        android:id="@+id/tuijian_layout_tuijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="推荐好友"
+
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/x14" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="推荐通讯录好友成为会员"
+
+            android:textColor="@color/main_sgry"
+            android:textSize="@dimen/x10" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayline" />
+    <LinearLayout
+        android:id="@+id/tuijian_layout_tpeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="我推荐的会员"
+
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/x14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:src="@drawable/icon_arroew_gray3x" />
+    </LinearLayout>
+</LinearLayout>

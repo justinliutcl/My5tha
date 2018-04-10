@@ -23,8 +23,8 @@
                 android:textSize="@dimen/minsize"
                 android:textColor="@color/main_color"
                 android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
+                android:paddingLeft="@dimen/x12"
+                android:paddingRight="@dimen/x12"
                 android:background="@drawable/smsbg_redandwhite"
                 />
         </LinearLayout>
@@ -38,12 +38,12 @@
                 android:id="@+id/pop_select_chongzhika"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="充值卡充值"
+                android:text="充值"
                 android:textSize="@dimen/minsize"
                 android:textColor="@color/main_color"
                 android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
+                android:paddingLeft="@dimen/x12"
+                android:paddingRight="@dimen/x12"
                 android:background="@drawable/smsbg_redandwhite"
                 />
         </LinearLayout>
@@ -56,12 +56,12 @@
                 android:id="@+id/pop_select_tixian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="提现"
+                android:text="佣金"
                 android:textSize="@dimen/minsize"
                 android:textColor="@color/main_color"
                 android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
+                android:paddingLeft="@dimen/x12"
+                android:paddingRight="@dimen/x12"
                 android:background="@drawable/smsbg_redandwhite"
                 />
         </LinearLayout>
@@ -74,77 +74,16 @@
                 android:id="@+id/pop_select_yongjin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="佣金收入"
+                android:text="退款"
                 android:textSize="@dimen/minsize"
                 android:textColor="@color/main_color"
                 android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
+                android:paddingLeft="@dimen/x12"
+                android:paddingRight="@dimen/x12"
                 android:background="@drawable/smsbg_redandwhite"
                 />
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/y10"
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/pop_select_zaixianchong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="在线充值"
-                android:textSize="@dimen/minsize"
-                android:textColor="@color/main_color"
-                android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
-                android:background="@drawable/smsbg_redandwhite"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/pop_select_zhifubao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="支付宝提现"
-                android:textSize="@dimen/minsize"
-                android:textColor="@color/main_color"
-                android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
-                android:background="@drawable/smsbg_redandwhite"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/pop_select_yinhangka"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="银行卡提现"
-                android:textSize="@dimen/minsize"
-                android:textColor="@color/main_color"
-                android:gravity="center"
-                android:paddingLeft="9dp"
-                android:paddingRight="9dp"
-                android:background="@drawable/smsbg_redandwhite"
-                />
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>

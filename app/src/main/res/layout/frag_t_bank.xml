@@ -42,6 +42,7 @@
             android:hint="请输入持卡人姓名"
             android:padding="10dp"
             android:background="#fff"
+            android:maxLength="10"
             android:inputType="text" >
 
         </EditText>
@@ -84,6 +85,7 @@
             android:hint="请输入您的银行卡号"
             android:padding="10dp"
             android:background="#fff"
+            android:maxLength="20"
             android:inputType="phone" >
 
         </EditText>
@@ -171,7 +173,8 @@
             android:hint="请输入您需要提现的金额"
             android:padding="10dp"
             android:background="#fff"
-            android:inputType="phone" >
+            android:maxLength="10"
+            android:inputType="number" >
 
         </EditText>
 
@@ -212,7 +215,9 @@
             android:hint="请输入第五大街平台支付密码"
             android:padding="10dp"
             android:background="#fff"
-            android:inputType="textPassword" >
+            android:maxLength="16"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+            android:inputType="numberPassword" >
 
         </EditText>
 

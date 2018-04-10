@@ -152,6 +152,20 @@
             android:textColor="@color/main_gry"
             android:padding="@dimen/x5"
             android:id="@+id/adapter_goodsorder_logistics" />
+        <Button
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定收货"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x10"
+            android:background="@drawable/buttonback"
+            android:textColor="#fff"
+            android:padding="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/adapter_goodsorder_besure" />
 
         <Button
             android:minWidth="0dp"
@@ -165,6 +179,7 @@
             android:background="@drawable/buttonback"
             android:textColor="#fff"
             android:padding="@dimen/x5"
+            android:visibility="gone"
             android:id="@+id/adapter_goodsorder_shopagain" />
 
         <Button
@@ -173,12 +188,13 @@
             android:focusable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="查看晒单"
+            android:text="我要晒单"
             android:layout_marginLeft="@dimen/x5"
             android:textSize="@dimen/x10"
             android:background="@drawable/grayandwhite"
             android:textColor="@color/main_gry"
             android:padding="@dimen/x5"
+            android:visibility="gone"
             android:id="@+id/adapter_goodsorder_seeorder" />
         <Button
             android:minWidth="0dp"

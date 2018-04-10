@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/x10"
+        >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="类别"
+           android:layout_marginLeft="@dimen/x10"
+           android:textSize="@dimen/x14"
+           android:textColor="@color/individualblack"
+           />
+        <GridView
+            android:id="@+id/dialog_classselect_classgrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:background="#fff"
+            >
+
+        </GridView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/x10"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="品牌"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/individualblack"
+            />
+        <GridView
+            android:id="@+id/dialog_classselect_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:background="#fff"
+            android:paddingBottom="@dimen/x22"
+            >
+
+        </GridView>
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="重置"
+                android:textColor="@color/individualblack"
+                android:background="@drawable/grayandwhite"
+                android:textSize="@dimen/x15"
+
+                android:id="@+id/dialog_classselect_reset" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="确认"
+                android:textColor="#fff"
+                android:textSize="@dimen/x15"
+                android:background="@drawable/buttonback_nooval"
+                android:id="@+id/dialog_classselect_sure" />
+        </LinearLayout>
+
+</LinearLayout>

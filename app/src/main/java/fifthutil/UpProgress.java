@@ -11,8 +11,8 @@ import android.widget.TextView;
 public class UpProgress {
     private ProgressBar bar;
     private int total;
-    private int have;
-    private int speed=2000;
+    private double have;
+    private int speed=30000;
     private int i=0;
     private TextView text;
     private Handler hand=new Handler(){
@@ -27,13 +27,13 @@ public class UpProgress {
                     hand.sendEmptyMessageDelayed(1,1);
 
                 }else{
-                    bar.setProgress(have);
-                    text.setText(have+"");
+                    bar.setProgress((int)have);
+                    text.setText(FifUtil.getPrice(have));
                 }
             }
         }
     };
-    public UpProgress(ProgressBar bar, int total, int have,TextView text) {
+    public UpProgress(ProgressBar bar, int total, double have,TextView text) {
         this.bar = bar;
         this.total = total;
         this.have = have;

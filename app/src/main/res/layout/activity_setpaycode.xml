@@ -129,9 +129,11 @@
             android:textColor="#444"
             android:textColorHint="@color/hintcolor"
             android:hint="设置支付密码（6-16位）"
+            android:maxLength="16"
             android:padding="10dp"
             android:background="#fff"
-            android:inputType="text" >
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+            android:inputType="numberPassword" >
 
         </EditText>
     </LinearLayout>

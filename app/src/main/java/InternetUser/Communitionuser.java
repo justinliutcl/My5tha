@@ -6,6 +6,24 @@ package InternetUser;
 public class Communitionuser {
     private String Commission;
     private String Number;
+    private String EncryptMemberId;
+    private boolean IsRefMember;
+
+    public boolean getIsRefMember() {
+        return IsRefMember;
+    }
+
+    public void setIsRefMember(boolean isRefMember) {
+        IsRefMember = isRefMember;
+    }
+
+    public String getEncryptMemberId() {
+        return EncryptMemberId;
+    }
+
+    public void setEncryptMemberId(String encryptMemberId) {
+        EncryptMemberId = encryptMemberId;
+    }
 
     public String getCommission() {
         return Commission;

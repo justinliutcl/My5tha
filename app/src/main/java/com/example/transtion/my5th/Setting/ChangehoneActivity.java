@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.transtion.my5th.BaseActivity;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.example.transtion.my5th.R;
 
 import fifthutil.FifUtil;

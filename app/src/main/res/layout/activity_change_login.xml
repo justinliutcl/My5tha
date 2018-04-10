@@ -56,8 +56,10 @@
             android:textColorHint="@color/hintcolor"
             android:hint="请输入旧密码"
             android:padding="10dp"
+            android:maxLength="16"
             android:background="#fff"
-            android:inputType="textPassword" >
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+            android:inputType="numberPassword" >
 
         </EditText>
     </LinearLayout>
@@ -96,7 +98,10 @@
             android:hint="请输入新密码"
             android:padding="10dp"
             android:background="#fff"
-            android:inputType="textPassword" >
+            android:maxLength="16"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+            android:inputType="numberPassword"
+            >
 
         </EditText>
     </LinearLayout>

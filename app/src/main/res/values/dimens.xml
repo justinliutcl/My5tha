@@ -10,7 +10,7 @@
     <dimen name="individualmarginright">11dp</dimen>
     <dimen name="individualmarginleft">8dp</dimen>
     <dimen name="minsize">@dimen/x10</dimen>
-    <dimen name="medsize">14dp</dimen>
+    <dimen name="medsize">@dimen/x14</dimen>
     <dimen name="editsize">@dimen/x13</dimen>
 
     <dimen name="ten">@dimen/x10</dimen>
@@ -24,4 +24,5 @@
 
     <dimen name="button_size">15dp</dimen>
     <dimen name="buttonpadding">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

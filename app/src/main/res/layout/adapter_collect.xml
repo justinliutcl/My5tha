@@ -19,7 +19,7 @@
             android:layout_height="@dimen/x85"
             android:background="@drawable/grayandwhite_noricepe"
             android:padding="2dp"
-            android:id="@+id/adapter_collect_img" />
+            android:id="@+id/adapter_horgrid_img" />
 
         <LinearLayout
             android:orientation="vertical"

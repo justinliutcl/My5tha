@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:paddingTop="@dimen/y14"
+    android:paddingLeft="@dimen/x5"
+    android:paddingRight="@dimen/x5"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="@dimen/x145"
+        android:layout_height="@dimen/x91"
+        android:layout_marginBottom="@dimen/x11"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="#fff"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/adapter_horgrid_img"
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x5"
+        android:paddingTop="@dimen/x3"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距结束:"
+                android:textSize="@dimen/ten"
+                android:textColor="@color/main_gry"
+                android:layout_marginRight="@dimen/x5"
+                android:id="@+id/adapter_qqtm_timetype" />
+            <customUI.CountdownView
+                android:id="@+id/adapter_qqtm_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isHideTimeBackground="true"
+                app:isShowHour="true"
+                app:suffixGravity="center"
+                app:suffixHour=" : "
+                app:suffixMinute=" : "
+                app:suffixLRMargin="1dp"
+                app:timeBgRadius="2dp"
+                app:suffixTextColor="@color/main_color"
+                app:suffixTextSize="@dimen/x11"
+                app:timeTextColor="@color/main_color"
+                app:timeTextSize="@dimen/x11" />
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/thirteen"
+            android:layout_marginTop="@dimen/x4"
+            android:text="德国铁元补血调经德国铁元补血调经德国铁元补血调经德国铁元补血调经德国铁元补血调经"
+            android:ellipsize="end"
+            android:lines="2"
+            android:id="@+id/adapter_qqtm_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grayline"
+            android:layout_marginTop="@dimen/x3"
+            android:id="@+id/textView40" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x1"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/layout"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/x12"
+                    android:text="￥"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/x18"
+                    android:text="266.00"
+                    android:id="@+id/adapter_qqtm_money" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市场参考价："
+                    android:textSize="@dimen/ten"
+                    android:textColor="@color/main_sgry"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥999"
+                    android:textSize="@dimen/ten"
+                    android:textColor="@color/main_sgry"
+                    android:id="@+id/adapter_qqtm_outmoney"
+
+                    />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/x5"
+                android:layout_marginRight="@dimen/x5"
+                android:id="@+id/adapter_qqtm_cityimg" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

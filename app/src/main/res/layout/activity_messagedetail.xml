@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.AHomeActivity.MessagedetailActivity"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/x10"
+        android:paddingBottom="@dimen/x10"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back3x"
+            />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息详情"
+            android:textColor="#444"
+            android:textSize="@dimen/title_size"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/messagedetail_delete"
+            android:layout_width="@dimen/x16"
+            android:layout_height="@dimen/x16"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_ashbin2x"
+
+            android:layout_marginRight="@dimen/x10"
+            android:layout_centerVertical="true"
+            android:textColor="#444"
+            android:textSize="@dimen/x11"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x10"
+        android:background="#fff"
+        android:layout_marginBottom="@dimen/x8"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:background="@drawable/icon_graytime"
+            android:id="@+id/imageView27" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-02-15 16:40"
+            android:layout_marginLeft="@dimen/x5"
+            android:textColor="@color/main_sgry"
+            android:textSize="@dimen/x12"
+            android:id="@+id/messagedetail_time" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_margin="@dimen/x5"
+        android:paddingTop="@dimen/x10"
+        android:paddingLeft="@dimen/x15"
+        android:paddingRight="@dimen/x15"
+        android:paddingBottom="@dimen/x20"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亲爱的第五大街会员："
+            android:textSize="@dimen/x12"
+            android:textColor="@color/individualblack"
+            android:id="@+id/textView90" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_marginTop="@dimen/x18"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/individualblack"
+            android:id="@+id/messagedetail_mes" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="由此给您带来不便，敬请谅解"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/individualblack"
+            android:layout_marginTop="@dimen/x18"
+            android:id="@+id/messagedetail_other" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第五大街"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/individualblack"
+            android:layout_marginTop="@dimen/x18"
+            android:id="@+id/textView93" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016年2月26日"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/individualblack"
+            android:layout_marginTop="@dimen/x5"
+            android:id="@+id/textView94" />
+    </LinearLayout>
+
+</LinearLayout>

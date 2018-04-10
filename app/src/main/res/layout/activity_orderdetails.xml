@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.transtion.my5th.DIndividualActivity.OrderdetailsActivity"
+    tools:context=".DIndividualActivity.Order.OrderdetailsActivity"
     android:orientation="vertical"
     xmlns:topbar="http://schemas.android.com/apk/res-auto"
     android:background="#e7e7e7"
@@ -76,7 +76,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="交易成功"
+                        android:text=""
                         android:textColor="#fff"
                         android:textSize="@dimen/x12"
                         android:layout_marginLeft="2dp"
@@ -102,7 +102,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2015918246739452984752837428935"
+                        android:text=""
                         android:textColor="#fff"
                         android:textSize="@dimen/x12"
                         android:id="@+id/orderdetail_ordernum" />
@@ -118,6 +118,7 @@
                 android:paddingLeft="@dimen/x16"
                 android:paddingRight="@dimen/x5"
                 android:background="#fff"
+                android:id="@+id/orderdetail_layout_logist"
                 >
 
                 <ImageView
@@ -140,7 +141,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="物流信息：订单交易成功"
+                        android:text="物流信息："
                         android:textSize="@dimen/x11"
                         android:textColor="#088923"
                         android:id="@+id/orderdetail_logistictype" />
@@ -148,7 +149,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2015-12 24:00:16:17"
+                        android:textSize="@dimen/ten"
+                        android:textColor="@color/main_gry"
                         android:layout_marginTop="5dp"
                         android:id="@+id/orderdetail_logistictime" />
                 </LinearLayout>
@@ -183,7 +185,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="蔡宇航"
                         android:textColor="@color/individualblack"
                         android:textSize="@dimen/x13"
                         android:id="@+id/orderdetail_name" />
@@ -192,7 +193,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
-                        android:text="181****0114"
                         android:textColor="@color/individualblack"
                         android:textSize="@dimen/x11"
                         android:id="@+id/orderdetail_phone" />
@@ -201,7 +201,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="河南省郑州市二七区行还是看is户口哈坎"
                     android:layout_marginTop="@dimen/y5"
                     android:textColor="@color/main_gry"
                     android:textSize="@dimen/x11"
@@ -239,6 +238,16 @@
                         android:textColor="@color/individualblack"
                         android:layout_marginLeft="5dp"
                         android:id="@+id/orderdetail_goodstype" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注：拆分后订单详情内显示发货地"
+                        android:textSize="@dimen/x11"
+                        android:visibility="gone"
+                        android:textColor="@color/main_color"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/orderdetail_goodstypecomment" />
                 </LinearLayout>
 
                 <TextView
@@ -261,6 +270,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="@dimen/y8"
+                android:id="@+id/orderdetail_layout_paytype"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -283,7 +293,6 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="￥81.00"
                         android:textColor="@color/individualblack"
                         android:textSize="@dimen/x12"
                         android:id="@+id/orderdetail_paymoney" />
@@ -310,6 +319,7 @@
                     android:paddingLeft="@dimen/x20"
                     android:paddingRight="@dimen/x20"
                     android:background="#faf7f8"
+                    android:orientation="vertical"
                     >
 
                 </LinearLayout>
@@ -358,12 +368,11 @@
                         android:text="商品总价"
                         android:textSize="@dimen/x10"
                         android:textColor="@color/main_gry"
-                        android:id="@+id/textView57" />
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="￥4199.00"
                         android:textSize="@dimen/x10"
                         android:textColor="@color/main_gry"
                         android:id="@+id/orderdetail_totalmoney" />
@@ -390,7 +399,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="￥9.00"
                         android:textSize="@dimen/x10"
                         android:textColor="@color/main_gry"
                         android:id="@+id/orderdetail_freight" />
@@ -403,6 +411,7 @@
                     android:paddingLeft="@dimen/x13"
                     android:paddingBottom="@dimen/y5"
                     android:paddingRight="@dimen/x11"
+                    android:id="@+id/orderdetail_layout_coupon"
                     >
 
                     <TextView
@@ -417,7 +426,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="-￥9.00"
                         android:textSize="@dimen/x10"
                         android:textColor="@color/main_gry"
                         android:id="@+id/orderdetail_couponmoney" />
@@ -441,7 +449,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="应付金额："
+                    android:text="支付金额："
                     android:layout_marginTop="@dimen/y6"
                     android:textColor="@color/main_gry"
                     android:textSize="@dimen/x10"
@@ -450,7 +458,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="￥4130.00"
                     android:layout_marginTop="@dimen/y6"
                     android:textColor="@color/main_color"
                     android:textSize="@dimen/x10"
@@ -479,7 +486,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2015-11-22 14:21：04"
                     android:layout_marginTop="@dimen/y3"
                     android:textColor="@color/main_gry"
                     android:textSize="@dimen/x10"
@@ -543,6 +549,7 @@
                     android:background="@drawable/buttonback"
                     android:textColor="#fff"
                     android:padding="@dimen/x5"
+                    android:visibility="gone"
                     android:id="@+id/orderdetail_bugagain" />
             </LinearLayout>
 

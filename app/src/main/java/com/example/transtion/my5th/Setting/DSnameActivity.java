@@ -6,16 +6,19 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.transtion.my5th.BaseActivity;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.example.transtion.my5th.R;
 
 import fifthutil.JumpUtil;
+import httpConnection.HttpConnectionUtil;
+import httpConnection.Path;
 
 public class DSnameActivity extends BaseActivity {
     ImageView back;
     TextView sure;
     EditText name;
     String oldname;
+    String path= Path.HOST+Path.ip+Path.CHANGE2NAME_PATH;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +54,14 @@ public class DSnameActivity extends BaseActivity {
     }
 
     private void commit() {
-
+        loding.showShapeLoding();
+       String nickname= name.getText().toString();
+        HttpConnectionUtil.getJsonJsonwithDialog(this, path, new String[]{"memberId","nickname"}, new String[]{share.getMemberID(),nickname}, loding, new HttpConnectionUtil.OnJsonCall() {
+            @Override
+            public void JsonCallBack(String str) {
+                show("修改成功");
+                JumpUtil.jump2finash(DSnameActivity.this);
+            }
+        });
     }
 }

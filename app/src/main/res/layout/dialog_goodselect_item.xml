@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/x8"
+    android:paddingBottom="@dimen/x10"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="@dimen/x14"
+        android:textColor="@color/individualblack"
+        android:id="@+id/dialog_goodselect_item_title" />
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/dialog_goodselect_item_layout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x25"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:id="@+id/dialog_goodselect_item_mes" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes4" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes5" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes6" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x25"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:textSize="@dimen/x13"
+            android:visibility="gone"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:id="@+id/dialog_goodselect_item_mes7" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes8" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes9" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes10" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes11" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes12" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x25"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:textSize="@dimen/x13"
+            android:visibility="gone"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:id="@+id/dialog_goodselect_item_mes13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes14" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes15" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes16" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes17" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x22"
+            android:text="100ml"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:textSize="@dimen/x13"
+            android:textColor="@color/individualblack"
+            android:background="@drawable/grayandwhite_oval"
+            android:layout_marginLeft="@dimen/x5"
+            android:visibility="gone"
+            android:id="@+id/dialog_goodselect_item_mes18" />
+    </LinearLayout>
+
+</HorizontalScrollView>
+
+</LinearLayout>

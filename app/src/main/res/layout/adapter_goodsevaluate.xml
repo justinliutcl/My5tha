@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/x10"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/x5"
+        android:layout_height="wrap_content"
+        android:id="@+id/adapter_goodsvaluate_layout_star"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@drawable/star_no"
+            android:id="@+id/adapter_goodsvaluate_star1"
+            />
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@drawable/star_no"
+            android:id="@+id/adapter_goodsvaluate_star2"
+            android:layout_marginLeft="@dimen/x6"
+            />
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@drawable/star_no"
+            android:id="@+id/adapter_goodsvaluate_star3"
+            android:layout_marginLeft="@dimen/x6"
+            />
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@drawable/star_no"
+            android:id="@+id/adapter_goodsvaluate_star4"
+            android:layout_marginLeft="@dimen/x6"
+            />
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@drawable/star_no"
+            android:id="@+id/adapter_goodsvaluate_star5"
+            android:layout_marginLeft="@dimen/x6"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/x13"
+            android:layout_marginLeft="@dimen/x15"
+
+            android:id="@+id/adapter_goodsevaluate_phone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10"
+        android:text="包装看着就很高大上包装看着就很高大上包装看着就很高大上包装看着就很高大上"
+        android:textSize="@dimen/x13"
+        android:textColor="@color/individualblack"
+        android:id="@+id/adapter_goodsevaluate_text" />
+
+    <customUI.GridViewForScrollView
+        android:id="@+id/adapter_goodsevaluate_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="5"
+        android:horizontalSpacing="@dimen/x5"
+        >
+
+    </customUI.GridViewForScrollView>
+</LinearLayout>

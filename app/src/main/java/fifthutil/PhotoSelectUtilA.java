@@ -50,6 +50,7 @@ public class PhotoSelectUtilA implements UploadUtil.OnUploadProcessListener{
 	Activity frag;
 	ShareUtil share;
 	Bitmap bmap;
+	String afterpath;
 	public PhotoSelectUtilA(Context context,Activity frag){
 		this.context=context;
 		this.frag=frag;
@@ -125,12 +126,23 @@ public class PhotoSelectUtilA implements UploadUtil.OnUploadProcessListener{
 	}
 
 	public void openImageStore(){
-		Intent intent=new Intent();
-		intent.setType("image/*");
-		intent.setAction(Intent.ACTION_GET_CONTENT);
+//		Intent intent=new Intent();
+//		intent.setType("image/*");
+//		intent.setAction(Intent.ACTION_GET_CONTENT);
+		Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 		frag.startActivityForResult(intent, SELECT_BY_STORE);
 	}
-	
+
+	public String getUribycaijian(){
+		File root=new File(Environment.getExternalStorageDirectory(), "csd");
+		if(!root.exists())
+			root.mkdirs();
+		String filename=new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date())+".jpg";
+		File uri=new File(root, filename);
+		return uri.getPath();
+	}
+
 	private void go2caijian(Intent data) {
         // 拿到剪切数据  
         bmap = data.getParcelableExtra("data");
@@ -142,7 +154,9 @@ public class PhotoSelectUtilA implements UploadUtil.OnUploadProcessListener{
         FileOutputStream foutput = null;
         ByteArrayOutputStream byteout=new ByteArrayOutputStream();
         try {
-            foutput = new FileOutputStream(new File(photopath));
+			afterpath=getUribycaijian();
+			photopath=afterpath;
+			foutput = new FileOutputStream(new File(afterpath));
             bmap.compress(Bitmap.CompressFormat.PNG, 100, foutput);
             bmap.compress(Bitmap.CompressFormat.PNG, 100, byteout);
 //            byte[] bytes=byteout.toByteArray();
@@ -152,7 +166,7 @@ public class PhotoSelectUtilA implements UploadUtil.OnUploadProcessListener{
 //            String phone=share.getName();
 			UploadUtil uploadUtil=UploadUtil.getInstance();
 			uploadUtil.setOnUploadProcessListener(this);
-			String fileKey = "pic";
+			String fileKey = "MemberAvatarImg";
 			Map<String, String> params = new HashMap<String, String>();
 			String memberId=share.getMemberID();
 			if(memberId.length()>3){
@@ -175,7 +189,6 @@ public class PhotoSelectUtilA implements UploadUtil.OnUploadProcessListener{
                 }
             }
         }
-	
 }
 	
 	public void send(String phone){

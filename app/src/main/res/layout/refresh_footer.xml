@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="#fff"
     android:gravity="center"
-    android:paddingBottom="@dimen/y3"
-    android:paddingTop="@dimen/y3" >
+    android:paddingBottom="@dimen/y5"
+    android:paddingTop="@dimen/y5" >
 
     <ProgressBar
         android:id="@+id/pull_to_load_progress"

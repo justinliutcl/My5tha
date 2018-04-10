@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.DIndividualActivity.Shimingshow"
+    android:background="#fff"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#fff"
+        topbar:medtitle="实名认证"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/x20"
+        android:paddingBottom="@dimen/x20"
+
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_marginBottom="@dimen/x15"
+            android:background="@drawable/realname_auditno"
+            android:id="@+id/shimingshow_iv_nonereal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/individualblack"
+            android:textSize="17dp"
+            android:text="未实名认证"
+            android:id="@+id/shimingshow_tv_nonereal" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/shimingshow_layout_mes"
+        android:visibility="gone"
+        >
+        <LinearLayout
+
+            android:id="@+id/shimingshow_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="姓        名："
+                android:textSize="@dimen/x15"
+                android:textColor="@color/seting"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/shimingshow_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:textColor="@color/main_gry"
+                android:textSize="@dimen/x14" />
+
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/shimingshow_layout_idcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="身份证号："
+                android:textSize="@dimen/x15"
+                android:textColor="@color/seting"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/shimingshow_tv_idcardnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:textColor="@color/main_gry"
+                android:textSize="@dimen/x14" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/shimingshow_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonback"
+            android:minHeight="0dp"
+            android:padding="@dimen/buttonpadding"
+            android:text="前往实名认证"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+</LinearLayout>

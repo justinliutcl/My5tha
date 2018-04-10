@@ -121,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="哆啦A梦"
+                    android:text=""
                     android:textColor="@color/individualblack"
                     android:textSize="@dimen/individualmedsize" />
 
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="男"
+                    android:text=""
                     android:textColor="@color/individualblack"
                     android:textSize="@dimen/individualmedsize" />
                 <ImageView
@@ -240,7 +240,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="158****5778"
+                    android:text=""
                     android:textColor="@color/individualblack"
                     android:textSize="@dimen/individualmedsize" />
 
@@ -326,11 +326,6 @@
                 android:layout_height="1dp"
                 android:background="@color/grayline" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/fifteen"
-                android:background="@color/grayline" />
             <LinearLayout
                 android:id="@+id/seting_layout_bindwechat"
                 android:layout_width="match_parent"

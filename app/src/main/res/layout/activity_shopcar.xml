@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5"
+    tools:context="com.example.transtion.my5th.BShopcar.ShopcarActivity"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#fff"
+        topbar:medtitle="购物车"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#ddd"
+        android:background="#fff"
+        android:dividerHeight="1dp"
+        android:visibility="gone"
+        android:id="@+id/shopcar_list" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:id="@+id/shopcar_layout"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:background="@drawable/shopping_none"
+            android:layout_marginTop="@dimen/x70"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您的购物袋还没有商品哦"
+            android:textSize="@dimen/x14"
+            android:layout_marginTop="@dimen/x17"
+            android:textColor="@color/main_gry"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/x42"
+        android:paddingLeft="@dimen/x15"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:background="@drawable/bg_radio3x"
+            android:id="@+id/shopcar_up_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/x11"
+            android:layout_marginLeft="@dimen/x10"
+            android:id="@+id/textView48" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/x5"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/main_color"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x10"
+                android:id="@+id/shopcar_up_money" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(含关税￥0，不含运费)"
+                android:textColor="@color/main_sgry"
+                android:textSize="@dimen/x10"
+                android:layout_marginTop="@dimen/x5"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x8"
+                android:layout_below="@+id/shopcar_up_money"
+                android:id="@+id/shopcar_up_mes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计："
+                android:textSize="@dimen/x11"
+                android:textColor="@color/main_gry"
+                android:layout_marginRight="@dimen/x2"
+                android:id="@+id/textView54"
+                android:layout_toLeftOf="@+id/shopcar_up_money"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bshop_layout_commit"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/x109"
+            android:background="@drawable/shopcarback_nooval"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结算"
+                android:layout_marginLeft="@dimen/x10"
+                android:textSize="@dimen/x14"
+                android:layout_marginRight="@dimen/x12"
+                android:textColor="#fff"
+                android:id="@+id/textView58" />
+
+            <ImageView
+                android:layout_width="@dimen/x12"
+                android:layout_height="@dimen/x12"
+                android:background="@drawable/clock"
+                android:id="@+id/imageView19" />
+            <customUI.CountdownView
+                android:id="@+id/shopcar_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x5"
+                app:isHideTimeBackground="true"
+                app:isShowHour="false"
+                app:suffixGravity="center"
+                app:suffixMinute=" : "
+                app:suffixTextColor="#fff"
+                app:suffixTextSize="@dimen/twelve"
+                app:timeTextColor="#fff"
+                app:timeTextSize="@dimen/ten" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

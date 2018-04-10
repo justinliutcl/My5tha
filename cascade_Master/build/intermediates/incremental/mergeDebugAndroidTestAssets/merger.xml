@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug"><source path="F:\studiowork2\My5th3\cascade_Master\build\intermediates\bundles\debug\assets"><file name="province_data.xml" path="F:\studiowork2\My5th3\cascade_Master\build\intermediates\bundles\debug\assets\province_data.xml"/></source></dataSet><dataSet config="main"><source path="F:\studiowork2\My5th3\cascade_Master\src\androidTest\assets"/></dataSet></merger>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.AHomeActivity.BanderdetailsDActivity"
+    android:background="#f5f5f5"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        topbar:medtitle="品牌信息"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+        <customUI.CustomScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f5f5f5"
+            android:scrollbars="none"
+            android:id="@+id/customScrollview"  >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x125"
+        android:id="@+id/banderdetails_iv_top"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/x8"
+        android:background="#fff"
+        >
+        <ImageView
+            android:layout_width="@dimen/x3"
+            android:layout_height="@dimen/y15"
+            android:background="@color/main_color"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fifteen"
+            android:textColor="@color/individualblack"
+            android:layout_gravity="center_vertical"
+            android:text="热门品牌"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/banderdetails_recycle_bander"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x152"
+        android:clipToPadding="false"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:background="#fff"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x37"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/x5"
+        android:layout_marginTop="@dimen/x10"
+
+        android:background="#fff"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/banderdetails_recycle_type"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/x37"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/x5"
+            android:paddingBottom="@dimen/x5"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="0dp"
+            android:background="#fff"
+
+            >
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="排序"
+            android:textColor="@color/main_sgry"
+            android:textSize="@dimen/x14"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/x10"
+            android:id="@+id/banderdetails_paixu"
+
+            />
+        <ImageView
+            android:layout_width="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gray_guai_up"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x3"
+            />
+    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f5f5f5"
+                    />
+    <customUI.GridViewForScrollView
+        android:id="@+id/banderdetails_grid_ggrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:background="#f5f5f5"
+
+        android:numColumns="2"
+        >
+
+    </customUI.GridViewForScrollView>
+                <LinearLayout
+                    android:id="@+id/banderdetails_layout_blin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/y10"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/x12"
+                        android:textColor="#ccc"
+                        android:paddingTop="@dimen/y10"
+                        android:paddingBottom="@dimen/y10"
+                        android:layout_gravity="center"
+                        android:text="亲，别拉了，到底了哦 ^_^"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </customUI.CustomScrollView>
+</LinearLayout>

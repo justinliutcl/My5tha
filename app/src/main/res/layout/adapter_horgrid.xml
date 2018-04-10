@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+<android.support.v7.widget.CardView
+    android:layout_width="@dimen/x100"
+    android:layout_height="@dimen/x100"
+    android:layout_margin="@dimen/x5"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="4dp"
+
+    >
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitXY"
+    android:id="@+id/adapter_horgrid_img"
+    />
+    <LinearLayout
+        android:id="@+id/adapter_horgrid_showall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看全部"
+            android:gravity="center"
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/x12"
+            android:visibility="visible"
+            />
+        <TextView
+            android:layout_width="@dimen/x50"
+            android:layout_margin="@dimen/x5"
+            android:layout_height="1dp"
+            android:background="#ddd"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:gravity="center"
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/x11"
+            android:visibility="visible"
+            />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/adapter_horgrid_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x5"
+        android:paddingRight="@dimen/x5"
+        android:textColor="@color/individualblack"
+        android:textSize="@dimen/twelve"
+        android:text="商品名"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingLeft="@dimen/x5"
+        android:paddingRight="@dimen/x5"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/adapter_horgrid_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/thirteen"
+            android:text="￥99.00"
+            />
+        <TextView
+            android:id="@+id/adapter_horgrid_outmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_gry"
+            android:textSize="@dimen/eleven"
+            android:text="￥99.00"
+            android:layout_marginLeft="@dimen/x5"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -9,6 +9,15 @@ public class CouponNuseItem {
     private String Description;
     private String Num;
     private String FaceValue;
+    private int Consumption;
+
+    public int getConsumption() {
+        return Consumption;
+    }
+
+    public void setConsumption(int consumption) {
+        Consumption = consumption;
+    }
 
     public String getEndTime() {
         return EndTime;

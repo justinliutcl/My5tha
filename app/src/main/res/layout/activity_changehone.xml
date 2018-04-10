@@ -81,6 +81,7 @@
             android:textColorHint="@color/hintcolor"
             android:hint="请输入短信验证码"
             android:padding="10dp"
+            android:maxLength="10"
             android:background="#fff"
             android:inputType="phone" >
 

@@ -3,13 +3,14 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#faf7f8"
-    android:layout_marginTop="@dimen/y9"
     >
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y9"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -17,7 +18,7 @@
             android:text="购物币支付："
             android:textSize="@dimen/x11"
             android:textColor="@color/main_gry"
-            android:id="@+id/textView48" />
+            android:id="@+id/payline_type" />
 
         <TextView
             android:layout_width="0dp"
@@ -26,7 +27,7 @@
             android:text="￥30"
             android:textSize="@dimen/x11"
             android:textColor="@color/main_gry"
-            android:id="@+id/textView49" />
+            android:id="@+id/payline_money" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,12 +45,8 @@
         android:layout_marginTop="@dimen/y5"
         android:textSize="@dimen/x10"
         android:textColor="@color/main_sgry"
-        android:id="@+id/textView51" />
+        android:id="@+id/payline_time"
+        android:layout_marginBottom="@dimen/y9"
+        />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ddd"
-        android:layout_marginTop="@dimen/y9"
-        android:id="@+id/textView52" />
 </LinearLayout>

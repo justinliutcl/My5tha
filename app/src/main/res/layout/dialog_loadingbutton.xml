@@ -8,15 +8,15 @@
     android:gravity="center"
     >
     <View
-        android:layout_width="@dimen/x100"
-        android:layout_height="@dimen/x100"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/x50"
         android:layout_centerInParent="true" />
 
     <customUI.Loding.LoadingButton
 
         android:id="@+id/loadView"
-        android:layout_width="@dimen/x70"
-        android:layout_height="@dimen/x70"
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/x40"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

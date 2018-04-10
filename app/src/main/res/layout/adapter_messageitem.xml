@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/x15"
+        android:paddingBottom="@dimen/x10"
+        >
+
+        <!--<ImageView-->
+            <!--android:layout_width="@dimen/x8"-->
+            <!--android:layout_height="@dimen/x8"-->
+            <!--android:background="@drawable/red_oval"-->
+            <!--android:layout_marginLeft="@dimen/x6"-->
+            <!--android:layout_marginTop="@dimen/x1"-->
+            <!--android:id="@+id/imageView26" />-->
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2月28日客服服务时间调整的公告"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/individualblack"
+                android:id="@+id/adapter_messagetitle" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:background="@drawable/icon_graytime"
+                    android:id="@+id/imageView27" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-02-15 16:40"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:textColor="@color/main_sgry"
+                    android:textSize="@dimen/x12"
+                    android:id="@+id/adapter_messagetime" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

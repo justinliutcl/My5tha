@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.transtion.my5th.BaseActivity;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.example.transtion.my5th.R;
 
 import InternetUser.SettingUser;
@@ -33,6 +33,7 @@ public class DSetingActivity extends BaseActivity {
     String selectitem[]={"男","女","保密","取消"};
     String path= Path.HOST+Path.ip+Path.SETING_PATH;
     String sexPath=Path.HOST+Path.ip+Path.SETSEX_PATH;
+    public static DSetingActivity instance=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,7 @@ public class DSetingActivity extends BaseActivity {
     }
 
     private void intoview() {
+        instance=this;
         layout_img= (LinearLayout) findViewById(R.id.seting_layout_img);
         layout_name= (LinearLayout) findViewById(R.id.seting_layout_name);
         layout_sex= (LinearLayout) findViewById(R.id.seting_layout_sex);
@@ -201,10 +203,10 @@ public class DSetingActivity extends BaseActivity {
                     JumpUtil.jumpWithValue(this,ChangehoneActivity.class,new String[]{"phone"},new String[]{user.getPhone()},true);
                     break;
                 case R.id.seting_layout_signpassword:
-                    JumpUtil.jump(this,ChangeLoginActivity.class,true);
+                    JumpUtil.jumpWithValue(this, ChangeLoginActivity.class, new String[]{"phone"}, new String[]{user.getPhone()}, true);
                     break;
                 case R.id.seting_layout_paypassword:
-                    JumpUtil.jump(this,SetpaycodeActivity.class,true);
+                    JumpUtil.jumpWithValue(this, SetpaycodeActivity.class, new String[]{"phone"}, new String[]{user.getPhone()}, true);
                     break;
                 case R.id.seting_layout_bindwechat:
 

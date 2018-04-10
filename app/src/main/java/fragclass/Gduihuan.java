@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.transtion.my5th.R;
 
 import InternetUser.Duiuser;
-import adapter.DuiAdapter;
+import adapter.Individual.DuiAdapter;
 import customUI.PullToRefreshView;
 import fifthutil.LodingUtil;
 import httpConnection.HttpConnectionUtil;
@@ -27,7 +27,7 @@ public class Gduihuan extends Fragment implements PullToRefreshView.OnFooterRefr
     PullToRefreshView refreshView;
     ListView list;
     public LodingUtil loding;
-    int now=1;
+    int now=2;
     int tatol;
     String path= Path.HOST+Path.ip+Path.GWB_DUIHUAN_PATH;
     Duiuser user;
@@ -63,6 +63,7 @@ public class Gduihuan extends Fragment implements PullToRefreshView.OnFooterRefr
             public void JsonCallBack(String str) {
                 user = HttpConnectionUtil.getDuiUser(str);
                 adapter = new DuiAdapter(user, getActivity());
+                tatol=Integer.parseInt(user.getPageCount());
                 list.setAdapter(adapter);
                 loding.disShapeLoding();
             }
@@ -84,7 +85,7 @@ public class Gduihuan extends Fragment implements PullToRefreshView.OnFooterRefr
     }
     @Override
     public void onFooterRefresh(PullToRefreshView view) {
-        if(now<tatol)
+        if(now<=tatol)
             refresh();
         else{
             Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();

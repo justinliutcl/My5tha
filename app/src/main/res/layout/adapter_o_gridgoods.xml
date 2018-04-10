@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/x246"
+    android:padding="0.5dp"
+    android:background="#eee"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x242"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x10"
+        android:background="#fff"
+        >
+        <ImageView
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x140"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/adapter_0_gridgoods_godimg" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/x5"
+            android:background="#fff"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:id="@+id/adapter_0_gridgoods_cityimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美国直供，郑州保税区发货"
+                android:textSize="@dimen/x10"
+                android:textColor="#999"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/x5"
+                android:id="@+id/adapter_0_gridgoods_type" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_marginTop="@dimen/x3"
+            android:layout_gravity="left"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/black"
+            android:lines="2"
+            android:id="@+id/adapter_0_gridgoods_title" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/x8"
+            android:layout_height="@dimen/x18"
+            android:layout_marginBottom="@dimen/x10"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/main_color"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="@dimen/x16"
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/main_color"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/adapter_0_gridgoods_money" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="￥0"
+                android:textSize="@dimen/x10"
+                android:layout_marginLeft="@dimen/x7"
+                android:textColor="@color/main_sgry"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/adapter_0_gridgoods_outmoney" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="right"
+                android:padding="2dp"
+                android:background="#a321dd"
+                android:textSize="@dimen/x10"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/adapter_0_gridgoods_ident" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

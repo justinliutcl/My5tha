@@ -9,29 +9,32 @@ import java.util.List;
 public class OrderDetailItem {
     private String Title;
     private double Price;
+    private String BelongType;
     private int Number;
-    private List<OrderTatilAttrItem> list;
+    private boolean IsEvluate;
+    private List<OrderTatilAttrItem> OrderTatilAttributeList;
     private String ImageSrc;
+    private String productId;
+    private String StrandardDescription;
+//    private boolean Display;
+    private boolean IsUseElectronic;
     DecimalFormat df = new DecimalFormat("#0.00");
-    public OrderDetailItem(String title, double price, int number, String imageSrc, List<OrderTatilAttrItem> list) {
-        Title = title;
-        Price = price;
-        Number = number;
-        ImageSrc = imageSrc;
-        this.list = list;
+
+    public boolean isUseElectronic() {
+        return IsUseElectronic;
+    }
+
+    public void setIsUseElectronic(boolean isUseElectronic) {
+        IsUseElectronic = isUseElectronic;
     }
 
 
-    public String getImageSrc() {
-        return ImageSrc;
-    }
 
-    public void setImageSrc(String imageSrc) {
-        ImageSrc = imageSrc;
+    public OrderDetailItem() {
     }
-
 
     public String getTitle() {
+
         return Title;
     }
 
@@ -39,12 +42,20 @@ public class OrderDetailItem {
         Title = title;
     }
 
-    public String getPrice() {
-        return df.format(Price);
+    public double getPrice() {
+        return Price;
     }
 
     public void setPrice(double price) {
         Price = price;
+    }
+
+    public String getBelongType() {
+        return BelongType;
+    }
+
+    public void setBelongType(String belongType) {
+        BelongType = belongType;
     }
 
     public int getNumber() {
@@ -55,16 +66,55 @@ public class OrderDetailItem {
         Number = number;
     }
 
-    public List<OrderTatilAttrItem> getList() {
-        return list;
+    public boolean isEvluate() {
+        return IsEvluate;
     }
 
-    public void setList(List<OrderTatilAttrItem> list) {
-        this.list = list;
+    public void setIsEvluate(boolean isEvluate) {
+        IsEvluate = isEvluate;
     }
 
-    public OrderDetailItem() {
-
+    public List<OrderTatilAttrItem> getOrderTatilAttributeList() {
+        return OrderTatilAttributeList;
     }
 
+    public void setOrderTatilAttributeList(List<OrderTatilAttrItem> orderTatilAttributeList) {
+        OrderTatilAttributeList = orderTatilAttributeList;
+    }
+
+    public String getImageSrc() {
+        return ImageSrc;
+    }
+
+    public void setImageSrc(String imageSrc) {
+        ImageSrc = imageSrc;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getStrandardDescription() {
+        return StrandardDescription;
+    }
+
+    public void setStrandardDescription(String strandardDescription) {
+        StrandardDescription = strandardDescription;
+    }
+
+    public OrderDetailItem(String title, double price, String belongType, int number, boolean isEvluate, List<OrderTatilAttrItem> orderTatilAttributeList, String imageSrc, String productId, String strandardDescription) {
+        Title = title;
+        Price = price;
+        BelongType = belongType;
+        Number = number;
+        IsEvluate = isEvluate;
+        OrderTatilAttributeList = orderTatilAttributeList;
+        ImageSrc = imageSrc;
+        this.productId = productId;
+        StrandardDescription = strandardDescription;
+    }
 }

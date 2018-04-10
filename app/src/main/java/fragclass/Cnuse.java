@@ -13,7 +13,7 @@ import com.example.transtion.my5th.R;
 import java.util.List;
 
 import InternetUser.Item.CouponNuseItem;
-import adapter.CouponNuseAdapter;
+import adapter.Individual.CouponNuseAdapter;
 import fifthutil.LodingUtil;
 import httpConnection.HttpConnectionUtil;
 import httpConnection.Path;

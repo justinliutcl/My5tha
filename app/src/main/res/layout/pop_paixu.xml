@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:id="@+id/pop_paixu_layout_all"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x15"
+            android:id="@+id/pop_paixu_layout_moren"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="默认排序"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/main_color"
+                android:id="@+id/pop_paixu_tv_moren"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x10"
+                android:layout_height="@dimen/x10"
+                android:background="@drawable/icon_sure"
+                android:id="@+id/pop_paixu_iv_moren"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x15"
+            android:id="@+id/pop_paixu_layout_xiaotl"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="销量从高到低"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/individualblack"
+                android:id="@+id/pop_paixu_tv_xiaotl"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x10"
+                android:layout_height="@dimen/x10"
+                android:background="#fff"
+                android:id="@+id/pop_paixu_iv_xiaotl"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x15"
+            android:id="@+id/pop_paixu_layout_xiaolt"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="销量从低到高"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/individualblack"
+                android:id="@+id/pop_paixu_tv_xiaolt"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x10"
+                android:layout_height="@dimen/x10"
+                android:background="#fff"
+                android:id="@+id/pop_paixu_iv_xiaolt"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x15"
+            android:id="@+id/pop_paixu_layout_pricetl"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="价格从高到低"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/individualblack"
+                android:id="@+id/pop_paixu_tv_pricetl"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x10"
+                android:layout_height="@dimen/x10"
+                android:background="#fff"
+                android:id="@+id/pop_paixu_iv_pricetl"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x15"
+            android:id="@+id/pop_paixu_layout_pricelt"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="价格从低到高"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/individualblack"
+                android:id="@+id/pop_paixu_tv_pricelt"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x10"
+                android:layout_height="@dimen/x10"
+                android:background="#fff"
+                android:id="@+id/pop_paixu_iv_pricelt"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"
+            />
+    </LinearLayout>
+</LinearLayout>

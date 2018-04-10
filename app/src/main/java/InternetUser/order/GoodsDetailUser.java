@@ -18,6 +18,38 @@ public class GoodsDetailUser {
     private double Freight;
     private double CouponMoney;
     private double Total;
+    private String ThirdPayType;
+    private double ThirdPayAmount;
+
+
+
+
+    private List<LogisticsItem>orderRecordSummaryList;
+
+    public List<LogisticsItem> getOrderRecordSummaryList() {
+        return orderRecordSummaryList;
+    }
+
+    public void setOrderRecordSummaryList(List<LogisticsItem> orderRecordSummaryList) {
+        this.orderRecordSummaryList = orderRecordSummaryList;
+    }
+
+    public String getThirdPayType() {
+        return ThirdPayType;
+    }
+
+    public void setThirdPayType(String thirdPayType) {
+        ThirdPayType = thirdPayType;
+    }
+
+    public double getThirdPayAmount() {
+        return ThirdPayAmount;
+    }
+
+    public void setThirdPayAmount(double thirdPayAmount) {
+        ThirdPayAmount = thirdPayAmount;
+    }
+
     private List<OrderDetailItem> list;
 
     public List<OrderDetailItem> getList() {

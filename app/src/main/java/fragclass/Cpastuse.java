@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.transtion.my5th.R;
 
 import InternetUser.CouponPastuser;
-import adapter.CouponPastuseAdapter;
+import adapter.Individual.CouponPastuseAdapter;
 import customUI.PullToRefreshView;
 import fifthutil.LodingUtil;
 import httpConnection.HttpConnectionUtil;
@@ -27,12 +27,13 @@ public class Cpastuse extends Fragment implements PullToRefreshView.OnFooterRefr
     PullToRefreshView refreshView;
     ListView list;
     public LodingUtil loding;
-    int now=1;
+    int now=2;
     int tatol;
     String path= Path.HOST+Path.ip+Path.COUPONPASTUSE_PATH;
     CouponPastuser user;
     ShareUtil share=ShareUtil.getInstanse(getActivity());
     CouponPastuseAdapter adapter;
+    boolean reflash=true;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -88,11 +89,14 @@ public class Cpastuse extends Fragment implements PullToRefreshView.OnFooterRefr
     }
     @Override
     public void onFooterRefresh(PullToRefreshView view) {
-        if(now<tatol)
+        if(now<=tatol)
             refresh();
         else{
-            Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();
-            refreshView.onFooterRefreshComplete();
+            if(reflash){
+                Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();
+                refreshView.onFooterRefreshComplete();
+                refreshView.getmFooterView().setVisibility(View.INVISIBLE);
+            }
         }
     }
 }

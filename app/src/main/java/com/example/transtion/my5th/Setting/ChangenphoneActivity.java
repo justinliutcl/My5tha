@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.transtion.my5th.BaseActivity;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.example.transtion.my5th.R;
 
 import fifthutil.JumpUtil;
@@ -30,7 +30,7 @@ public class ChangenphoneActivity extends BaseActivity {
         authcode= (EditText) findViewById(R.id.changephone_authcode);
         sendoldSMS= (Button) findViewById(R.id.changephone_sendoldsms);
         next= (Button) findViewById(R.id.changephone_next);
-        smsUtil=new SMSUtil(sendoldSMS,this,authcode,"22");
+        smsUtil=new SMSUtil(sendoldSMS,this,phonenum,"22","changephone");
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

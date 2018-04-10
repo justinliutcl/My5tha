@@ -3,11 +3,13 @@ package httpConnection;
 import android.os.Handler;
 import android.util.Log;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,7 +26,7 @@ public class UploadUtil {
 	    private static final String LINE_END = "\r\n";  
 	    private static final String CONTENT_TYPE = "multipart/form-data"; // 内容类型
 		private static LodingUtil loading;
-	    private UploadUtil() {  
+	    private UploadUtil() {
 	  
 	    }  
 	  Handler handler=new Handler();
@@ -77,7 +79,7 @@ public class UploadUtil {
 	    public void uploadFile(String filePath, String fileKey, String RequestURL,  
 	            Map<String, String> param, LodingUtil loading) {
 			this.loading=loading;
-	        if (filePath == null) {  
+	        if (filePath == null) {
 	            sendMessage(UPLOAD_FILE_NOT_EXISTS_CODE,"文件不存在");
 				loading.dismiss();
 	            return;  
@@ -91,9 +93,35 @@ public class UploadUtil {
 	            e.printStackTrace();  
 	            return;  
 	        }  
-	    }  
-	  
-	    /** 
+	    }
+
+
+	public void upmanyloadFile(String[] filePath, String[] fileKey, String RequestURL,
+						   Map<String, String> param, LodingUtil loading) {
+		this.loading=loading;
+		if (filePath == null) {
+			sendMessage(UPLOAD_FILE_NOT_EXISTS_CODE,"文件不存在");
+			loading.dismiss();
+			return;
+		}
+		try {
+			File []file = new File[filePath.length];
+			for(int i=0;i<filePath.length;i++){
+				file[i]=new File(filePath[i]);
+			}
+//			File file = new File(filePath);
+			upsomeloadFile(file, fileKey, RequestURL, param);
+		} catch (Exception e) {
+			sendMessage(UPLOAD_FILE_NOT_EXISTS_CODE,"文件不存在");
+			loading.dismiss();
+			e.printStackTrace();
+			return;
+		}
+	}
+
+
+
+	/**
 	     * android上传文件到服务器 
 	     *  
 	     * @param file 
@@ -120,16 +148,36 @@ public class UploadUtil {
 	            }  
 	        }).start();  
 	          
-	    }  
-	  
-	    private void toUploadFile(File file, String fileKey, String RequestURL,  
+	    }
+
+
+	public void upsomeloadFile(final File[] file, final String[] fileKey,
+						   final String RequestURL, final Map<String, String> param) {
+//		if (file == null || (!file.exists())) {
+//			sendMessage(UPLOAD_FILE_NOT_EXISTS_CODE,"文件不存在");
+//			return;
+//		}
+
+//		Log.i(TAG, "请求的URL=" + RequestURL);
+//		Log.i(TAG, "请求的fileName=" + file.getName());
+//		Log.i(TAG, "请求的fileKey=" + fileKey);
+		new Thread(new Runnable() {  //开启线程上传文件
+			@Override
+			public void run() {
+				toUpsomeloadFile(file, fileKey, RequestURL, param);
+			}
+		}).start();
+
+	}
+
+	private void toUploadFile(File file, String fileKey, String RequestURL,
 	            Map<String, String> param) {  
 	        String result = null;  
 	        requestTime= 0;  
 	          
 	        long requestTime = System.currentTimeMillis();  
-	        long responseTime = 0;  
-	  
+	        long responseTime = 0;
+			BufferedReader br = null;
 	        try {  
 	            URL url = new URL(RequestURL);  
 	            HttpURLConnection conn = (HttpURLConnection) url.openConnection();  
@@ -218,13 +266,20 @@ public class UploadUtil {
 	            Log.e(TAG, "response code:" + res);  
 	            if (res == 200) {  
 	                Log.e(TAG, "request success");  
-	                InputStream input = conn.getInputStream();  
-	                StringBuffer sb1 = new StringBuffer();  
-	                int ss;  
-	                while ((ss = input.read()) != -1) {  
-	                    sb1.append((char) ss);  
-	                }  
-	                result = sb1.toString();  
+	                InputStream input = conn.getInputStream();
+//	                StringBuffer sb1 = new StringBuffer();
+//	                int ss;
+//	                while ((ss = input.read()) != -1) {
+//	                    sb1.append((char) ss);
+//	                }
+//	                result = sb1.toString();
+					br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+					StringBuffer sb1 = new StringBuffer();
+					String line;
+					while((line = br.readLine())!=null){
+						sb1.append(line);
+					}
+					result= sb1.toString();
 	                Log.e(TAG, "result : " + result);  
 	                sendMessage(UPLOAD_SUCCESS_CODE, result);
 	                return;  
@@ -245,10 +300,177 @@ public class UploadUtil {
 //	            sendMessage(UPLOAD_SERVER_ERROR_CODE,"上传失败：error=" + e.getMessage());
 	            e.printStackTrace();  
 	            return;  
-	        }  
-	    }  
-	  
-	    /** 
+	        }
+		finally {
+				if(br != null){
+					try {
+						br.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+
+
+	private void toUpsomeloadFile(File[] file, String[] fileKey, String RequestURL,
+							  Map<String, String> param) {
+		String result = null;
+		requestTime= 0;
+
+		long requestTime = System.currentTimeMillis();
+		long responseTime = 0;
+		BufferedReader br = null;
+		try {
+			URL url = new URL(RequestURL);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setReadTimeout(readTimeOut);
+			conn.setConnectTimeout(connectTimeout);
+			conn.setDoInput(true); // 允许输入流
+			conn.setDoOutput(true); // 允许输出流
+			conn.setUseCaches(false); // 不允许使用缓存
+			conn.setRequestMethod("POST"); // 请求方式
+			conn.setRequestProperty("Charset", CHARSET); // 设置编码
+			conn.setRequestProperty("connection", "keep-alive");
+			conn.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)");
+			conn.setRequestProperty("apikey", "5efb40ae2660e7c80327e7cdf0895758");
+			conn.setRequestProperty("Content-Type", CONTENT_TYPE + ";boundary=" + BOUNDARY);
+//	          conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+			/**
+			 * 当文件不为空，把文件包装并且上传
+			 */
+			DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
+			StringBuffer sb = null;
+			String params = "";
+
+			/***
+			 * 以下是用于上传参数
+			 */
+			if (param != null && param.size() > 0) {
+				Iterator<String> it = param.keySet().iterator();
+				while (it.hasNext()) {
+					sb = null;
+					sb = new StringBuffer();
+					String key = it.next();
+					String value = param.get(key);
+					sb.append(PREFIX).append(BOUNDARY).append(LINE_END);
+					sb.append("Content-Disposition: form-data; name=\"").append(key).append("\"").append(LINE_END).append(LINE_END);
+					sb.append(value).append(LINE_END);
+					params = sb.toString();
+					Log.i(TAG, key+"="+params+"##");
+					dos.write(params.getBytes());
+//	                  dos.flush();
+				}
+			}
+
+			sb = null;
+			params = null;
+			sb = new StringBuffer();
+			/**
+			 * 这里重点注意： name里面的值为服务器端需要key 只有这个key 才可以得到对应的文件
+			 * filename是文件的名字，包含后缀名的 比如:abc.png
+			 */
+
+			for(int i=0;i<file.length;i++){
+				sb.append(PREFIX).append(BOUNDARY).append(LINE_END);
+				sb.append("Content-Disposition:form-data; name=\"" + fileKey[i]
+						+ "\"; filename=\"" + file[i].getName() + "\"" + LINE_END);
+				sb.append("Content-Type:image/pjpeg" + LINE_END); // 这里配置的Content-type很重要的 ，用于服务器端辨别文件的类型的
+				sb.append(LINE_END);
+				params = sb.toString();
+				dos.write(params.getBytes());
+
+				InputStream is = new FileInputStream(file[i]);
+				onUploadProcessListener.initUpload((int)file[i].length());
+				byte[] bytes = new byte[1024];
+				int len = 0;
+				int curLen = 0;
+				while ((len = is.read(bytes)) != -1) {
+					curLen += len;
+					dos.write(bytes, 0, len);
+					onUploadProcessListener.onUploadProcess(curLen);
+				}
+				is.close();
+
+				dos.write(LINE_END.getBytes());
+			}
+//			params = sb.toString();
+//			sb = null;
+//
+////			Log.i(TAG, file.getName()+"=" + params+"##");
+//			dos.write(params.getBytes());
+			/**上传文件*/
+//		for(int i=0;i<file.length;i++){
+//			InputStream is = new FileInputStream(file[i]);
+//			onUploadProcessListener.initUpload((int)file[i].length());
+//			byte[] bytes = new byte[1024];
+//			int len = 0;
+//			int curLen = 0;
+//			while ((len = is.read(bytes)) != -1) {
+//				curLen += len;
+//				dos.write(bytes, 0, len);
+//				onUploadProcessListener.onUploadProcess(curLen);
+//			}
+//			is.close();
+//
+//			dos.write(LINE_END.getBytes());
+//
+//		}
+			byte[] end_data = (PREFIX + BOUNDARY + PREFIX + LINE_END).getBytes();
+			dos.write(end_data);
+			dos.flush();
+
+
+//
+//	          dos.write(tempOutputStream.toByteArray());
+			/**
+			 * 获取响应码 200=成功 当响应成功，获取响应的流
+			 */
+			int res = conn.getResponseCode();
+			responseTime = System.currentTimeMillis();
+			this.requestTime = (int) ((responseTime-requestTime)/1000);
+			Log.e(TAG, "response code:" + res);
+			if (res == 200) {
+//				StringBuffer sb1 = new StringBuffer();
+//	                int ss;
+//	                while ((ss = input.read()) != -1) {
+//	                    sb1.append((char) ss);
+//	                }
+//	                result = sb1.toString();
+
+				Log.e(TAG, "request success");
+				br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+				StringBuffer sb1 = new StringBuffer();
+				String line;
+				while((line = br.readLine())!=null){
+					sb1.append(line);
+				}
+				br.close();
+				result= sb1.toString();
+				Log.e(TAG, "result : " + result);
+				sendMessage(UPLOAD_SUCCESS_CODE, result);
+				return;
+			} else {
+				Log.e(TAG, "上传失败：code=" + res);
+//	                sendMessage(UPLOAD_SERVER_ERROR_CODE,"上传失败：code=" + res);
+				return;
+			}
+		} catch (MalformedURLException e) {
+			Log.e(TAG, "上传失败：error=" + e.getMessage());
+			loading.dismiss();
+//	            sendMessage(UPLOAD_SERVER_ERROR_CODE,"上传失败：error=" + e.getMessage());
+			e.printStackTrace();
+			return;
+		} catch (IOException e) {
+			loading.dismiss();
+			Log.e(TAG, "上传失败：error=" + e.getMessage());
+//	            sendMessage(UPLOAD_SERVER_ERROR_CODE,"上传失败：error=" + e.getMessage());
+			e.printStackTrace();
+			return;
+		}
+	}
+	/**
 	     * 发送上传结果 
 	     * @param responseCode 
 	     * @param responseMessage 

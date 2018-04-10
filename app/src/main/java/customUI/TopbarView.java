@@ -66,6 +66,12 @@ TextView title;
 		});
 		
 	}
+
+	public ImageView getLeftView(){
+		return left;
+	}
+
+
 	public void setleftListener(final Context context){
 		left.setOnClickListener(new OnClickListener() {
 			

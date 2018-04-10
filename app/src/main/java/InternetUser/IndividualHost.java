@@ -9,11 +9,13 @@ public class IndividualHost {
     private String MemberId;
     private String NickName;
     private String MemberType;
+    private String EncryptMemberId;
     private String MemberAvatarImg;
     private int UnpaidNumber;
     private int UnDeliveryNumber;
     private int UnReceiveNumber;
     private int MyShareThreaNum;
+    private int UnShareNumber;
     private double MyGwb;
     private double MyCommission;
     private String DreamFund;
@@ -21,6 +23,32 @@ public class IndividualHost {
     private boolean IsSignIn;
     private String Continuous;
     private String tomorrowDrame;
+    private boolean IsRefMember;
+
+    public String getEncryptMemberId() {
+        return EncryptMemberId;
+    }
+
+    public void setEncryptMemberId(String encryptMemberId) {
+        EncryptMemberId = encryptMemberId;
+    }
+
+    public int getUnShareNumber() {
+        return UnShareNumber;
+    }
+
+    public void setUnShareNumber(int unShareNumber) {
+        UnShareNumber = unShareNumber;
+    }
+
+    public boolean isRefMember() {
+        return IsRefMember;
+    }
+
+    public void setIsRefMember(boolean isRefMember) {
+        IsRefMember = isRefMember;
+    }
+
     DecimalFormat df = new DecimalFormat("#0.00");
 
     public IndividualHost() {

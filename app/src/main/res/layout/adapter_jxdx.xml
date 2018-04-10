@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/adapter_jxdx_topimg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x170"
+            android:scaleType="fitXY"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/adapter_jxdx_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x165"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/x15"
+            android:paddingLeft="@dimen/x20"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="@dimen/x160"
+            android:background="@drawable/upview"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</LinearLayout>

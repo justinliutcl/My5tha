@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.transtion.my5th.BaseActivity;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.example.transtion.my5th.R;
 
 import fifthutil.JumpUtil;
@@ -18,6 +18,7 @@ EditText phone,smscode,paycode;
     Button sendSMS,sure;
     SMSUtil smsUtil;
     String path= Path.HOST+Path.ip+Path.CHANGE_CODE_PATH;
+    String mphone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,13 +28,14 @@ EditText phone,smscode,paycode;
     }
 
     private void intoview() {
+        mphone=getIntent().getStringExtra("phone");
         phone= (EditText) findViewById(R.id.setpaycode_phone);
         smscode= (EditText) findViewById(R.id.setpaycode_smscode);
         paycode= (EditText) findViewById(R.id.setpaycode_paycode);
         sendSMS= (Button) findViewById(R.id.setpaycode_sendsms);
         sure= (Button) findViewById(R.id.setpaycode_sure);
         smsUtil=new SMSUtil(sendSMS,this,phone,"2");
-
+        smsUtil.setForgetPhone(mphone);
     }
 
     @Override

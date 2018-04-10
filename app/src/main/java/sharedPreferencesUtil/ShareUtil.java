@@ -115,6 +115,38 @@ public class ShareUtil {
         return sp.getString("memberId","");
     }
 
+
+    public void setHostTitle(String id){
+        SharedPreferences.Editor editor=sp.edit();
+        editor.putString("HostTitle",id);
+        editor.commit();
+    }
+
+    public String getfirstHost(){
+        return sp.getString("firstHost","");
+    }
+
+    public void setfirstHost(String id){
+        SharedPreferences.Editor editor=sp.edit();
+        editor.putString("firstHost",id);
+        editor.commit();
+    }
+
+    public String getHostTitle(){
+        return sp.getString("HostTitle","");
+    }
+
+
+    public void setSelectItem(String id,String mes){
+        SharedPreferences.Editor editor=sp.edit();
+        editor.putString(id,mes);
+        editor.commit();
+    }
+
+    public String getSelectItem(String id){
+        return sp.getString(id,"");
+    }
+
     public void clear(){
         SharedPreferences.Editor editor=sp.edit();
         editor.clear();

@@ -3,6 +3,7 @@ package fragclass;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import com.example.transtion.my5th.R;
 
 import InternetUser.CouponHuser;
-import adapter.CouponHuseAdapter;
+import adapter.Individual.CouponHuseAdapter;
 import customUI.PullToRefreshView;
 import fifthutil.LodingUtil;
 import httpConnection.HttpConnectionUtil;
@@ -27,12 +28,13 @@ public class Chuse extends Fragment implements PullToRefreshView.OnFooterRefresh
     PullToRefreshView refreshView;
     ListView list;
     public LodingUtil loding;
-    int now=1;
+    int now=2;
     int tatol;
     String path= Path.HOST+Path.ip+Path.COUPONHUSE_PATH;
     CouponHuser user;
     ShareUtil share=ShareUtil.getInstanse(getActivity());
     CouponHuseAdapter adapter;
+    boolean reflash=true;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -68,6 +70,7 @@ public class Chuse extends Fragment implements PullToRefreshView.OnFooterRefresh
                 adapter = new CouponHuseAdapter(user, getActivity());
                 list.setAdapter(adapter);
                 loding.disShapeLoding();
+                Log.i("chuse",str);
             }
         });
     }
@@ -87,11 +90,15 @@ public class Chuse extends Fragment implements PullToRefreshView.OnFooterRefresh
     }
     @Override
     public void onFooterRefresh(PullToRefreshView view) {
-        if(now<tatol)
+        if(now<=tatol)
             refresh();
         else{
-            Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();
-            refreshView.onFooterRefreshComplete();
+            if(reflash){
+                Toast.makeText(getActivity(), "已到最后一页", Toast.LENGTH_SHORT).show();
+                refreshView.onFooterRefreshComplete();
+                refreshView.getmFooterView().setVisibility(View.INVISIBLE);
+            }
+
         }
     }
 }

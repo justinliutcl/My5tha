@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/y15"
-        android:paddingBottom="@dimen/y15"
         android:paddingLeft="@dimen/x15"
         android:paddingRight="@dimen/x15"
         >
@@ -34,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NewTextttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"
+                android:text=""
                 android:textSize="@dimen/x11"
                 android:textColor="@color/individualblack"
                 android:lines="2"
@@ -44,7 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text=""
                 android:textSize="@dimen/x11"
                 android:textColor="@color/main_gry"
                 android:singleLine="true"
@@ -62,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="￥59.00"
+                android:text=""
                 android:textSize="@dimen/x12"
                 android:textColor="@color/individualblack"
                 android:id="@+id/linearlayout_orderlist_money" />
@@ -70,17 +69,33 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="×2"
+                android:text=""
                 android:textSize="@dimen/x11"
                 android:textColor="@color/main_gry"
                 android:layout_gravity="right"
                 android:id="@+id/linearlayout_orderlist_sum" />
         </LinearLayout>
     </LinearLayout>
-
+    <Button
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我要晒单"
+        android:textSize="@dimen/x10"
+        android:background="@drawable/buttonback"
+        android:textColor="#fff"
+        android:padding="@dimen/x5"
+        android:layout_marginTop="@dimen/x10"
+        android:visibility="gone"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/x10"
+        android:id="@+id/linearlayout_orderlist_seeorder" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ddd"
+        android:layout_marginTop="@dimen/x10"
         android:id="@+id/textView32" />
 </LinearLayout>

@@ -25,6 +25,7 @@ public class SMSUtil {
     private boolean istext=false;
     private LodingUtil loading;
     private String p="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0-9]|17[0-9])\\d{8}$";
+    private String forgetPhone;
     public SMSUtil() {
     }
    private  Handler hand=new Handler(){
@@ -65,15 +66,6 @@ public class SMSUtil {
                        @Override
                        public void JsonCallBack(String str) {
                            loading.disShapeLoding();
-                           Toast.makeText(context,str,Toast.LENGTH_SHORT).show();
-//                           AllHost host=HttpConnectionUtil.getAllHost(str);
-//                           if(!host.isSuccess()){
-//                               istext=true;
-//                               Toast.makeText(context,host.getMessage(),Toast.LENGTH_SHORT).show();
-//                           }else{
-//                               Toast.makeText(context,host.getMessage(),Toast.LENGTH_SHORT).show();
-//                               istext=true;
-//                           }
                        }
                    });
                }
@@ -81,15 +73,15 @@ public class SMSUtil {
         });
     }
 
-    public SMSUtil(Button btnn, Context contextt, final String phone,String t) {
+    public SMSUtil(Button btnn, Context contextt, String phone,String t) {
         this.btn = btnn;
         this.context = contextt;
         loading=new LodingUtil(contextt);
         final String type=t;
+        phoneNum=phone;
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNum=phone;
                 if (panduan()){
                     loading.showShapeLoding();
                     btn.setEnabled(false);
@@ -99,7 +91,7 @@ public class SMSUtil {
                         @Override
                         public void JsonCallBack(String str) {
                             loading.disShapeLoding();
-                            Toast.makeText(context,str,Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(context,str,Toast.LENGTH_SHORT).show();
 //                           AllHost host=HttpConnectionUtil.getAllHost(str);
 //                           if(!host.isSuccess()){
 //                               istext=true;
@@ -114,6 +106,12 @@ public class SMSUtil {
             }
         });
     }
+
+    public void setForgetPhone(String phone){
+        forgetPhone=phone;
+    }
+
+
     public SMSUtil(Button btnn, Context contextt, final EditText phone,String t) {
         this.btn = btnn;
         this.context = contextt;
@@ -124,29 +122,62 @@ public class SMSUtil {
             public void onClick(View v) {
                 phoneNum=phone.getText().toString();
                 if (panduan()){
-                    loading.showShapeLoding();
-                    btn.setEnabled(false);
-                    btn.setText("发送中" + "(" + i + ")");
-                    hand.sendEmptyMessage(1);
-                    HttpConnectionUtil.getGetJson(context, path2 + phoneNum+"&passwordType="+type, loading,new HttpConnectionUtil.OnJsonCall() {
-                        @Override
-                        public void JsonCallBack(String str) {
-                            loading.disShapeLoding();
-                            Toast.makeText(context,str,Toast.LENGTH_SHORT).show();
-//                           AllHost host=HttpConnectionUtil.getAllHost(str);
-//                           if(!host.isSuccess()){
-//                               istext=true;
-//                               Toast.makeText(context,host.getMessage(),Toast.LENGTH_SHORT).show();
-//                           }else{
-//                               Toast.makeText(context,host.getMessage(),Toast.LENGTH_SHORT).show();
-//                               istext=true;
-//                           }
+                    if(forgetPhone!=null){
+                        if(forgetPhone.equals(phoneNum)){
+                            send(type);
+                        }else{
+                            showmes("请输入注册手机号");
                         }
-                    });
+                    }else{
+                        send(type);
+                    }
+
+
+
+
                 }
             }
         });
     }
+
+    public SMSUtil(Button btnn, Context contextt, final EditText phone,String t,String typecode) {
+        this.btn = btnn;
+        this.context = contextt;
+        loading=new LodingUtil(contextt);
+        final String type=t;
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                phoneNum=phone.getText().toString();
+                if (panduan()){
+                        send(type);
+                }
+            }
+        });
+    }
+
+
+
+
+    public void showmes(String text){
+        Toast.makeText(context,text,Toast.LENGTH_SHORT).show();
+    }
+
+    public void send(String type){
+        loading.showShapeLoding();
+        btn.setEnabled(false);
+        btn.setText("发送中" + "(" + i + ")");
+        hand.sendEmptyMessage(1);
+        HttpConnectionUtil.getGetJson(context, path2 + phoneNum+"&passwordType="+type, loading,new HttpConnectionUtil.OnJsonCall() {
+            @Override
+            public void JsonCallBack(String str) {
+                loading.disShapeLoding();
+//                           }
+            }
+        });
+    }
+
+
     public boolean panduan(){
         if(!phoneNum.matches(p)){
             Toast.makeText(context,"请输入正确手机号",Toast.LENGTH_SHORT).show();

@@ -9,7 +9,16 @@ import InternetUser.Item.ReferItem;
  */
 public class ReferUser {
     private String PageCount;
+    private String ReferrerCount;
     private List<ReferItem>list;
+
+    public String getReferrerCount() {
+        return ReferrerCount;
+    }
+
+    public void setReferrerCount(String referrerCount) {
+        ReferrerCount = referrerCount;
+    }
 
     public String getPageCount() {
         return PageCount;

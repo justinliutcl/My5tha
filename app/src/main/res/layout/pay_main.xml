@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.transtion.my5th.demo.ExternalFragment"
+        android:name="com.example.transtion.my5th.alipay.ExternalFragment"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 

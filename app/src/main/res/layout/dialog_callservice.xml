@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="联系客服"
+        android:layout_marginTop="@dimen/x20"
+        android:id="@+id/textView91"
+        android:textColor="@color/individualblack"
+        android:textSize="@dimen/x14"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginBottom="@dimen/x30"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/x100"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/dialog_callservice_layout_phone"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x43"
+                android:id="@+id/dialog_callservice_phone"
+                android:background="@drawable/phone2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话联系"
+                android:textSize="@dimen/x10"
+                android:textColor="@color/individualblack"
+                android:layout_marginTop="@dimen/x3"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/x100"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/x55"
+            android:id="@+id/dialog_callservice_layout_qq"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x43"
+                android:background="@drawable/serviceqq"
+                android:id="@+id/dialog_callservice_qq"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ联系"
+                android:textSize="@dimen/x10"
+                android:textColor="@color/individualblack"
+                android:layout_marginTop="@dimen/x3"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

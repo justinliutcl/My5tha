@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:id="@+id/host_scrollview" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x200"
+                >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/x200" />
+
+
+                    <LinearLayout
+                        android:id="@+id/viewGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/y10"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x8"
+                android:gravity="center_vertical"
+                android:background="#fff"
+                android:id="@+id/fragment_h_host_layout_qqtm"
+                >
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+
+                    android:src="@drawable/icon_xptm2x"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fifteen"
+                    android:textColor="@color/black"
+                    android:text="全球特卖"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_sgry"
+                    android:text="每天上新品"
+                    android:textSize="@dimen/twelve"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <customUI.ListViewForScrollView
+                android:id="@+id/fragment_h_host_qqtmlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="1dp"
+                android:divider="#ddd"
+                >
+
+            </customUI.ListViewForScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x8"
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="@dimen/x3"
+                    android:layout_height="@dimen/y15"
+                    android:background="@color/main_color"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fifteen"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:text="匠心独寻"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_sgry"
+                    android:text="为你寻找全球大牌"
+                    android:textSize="@dimen/twelve"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+            <customUI.ListViewForScrollView
+                android:id="@+id/fragment_h_host_jxdxlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="1dp"
+                android:divider="#ddd"
+                >
+
+            </customUI.ListViewForScrollView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x8"
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="@dimen/x3"
+                    android:layout_height="@dimen/y15"
+                    android:background="#f6c20e"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fifteen"
+                    android:textColor="@color/black"
+                    android:text="热门活动"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_sgry"
+                    android:text="精彩天天有"
+                    android:textSize="@dimen/twelve"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd"
+                />
+
+            <customUI.ListViewForScrollView
+                android:id="@+id/fragment_h_host_rmhdlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="0dp"
+                >
+            </customUI.ListViewForScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/y20"
+                android:paddingBottom="@dimen/y10"
+                android:gravity="center"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/x12"
+                android:textColor="#ccc"
+                android:text="亲，别拉了，到底了哦 ^_^"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

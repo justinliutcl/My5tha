@@ -14,25 +14,27 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <!-- 蓝牙分享所需的权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_appicon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".mActivity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".mActivity.MainActivity" />
+        <activity android:name=".mActivity.LoginActivity" />
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -63,21 +65,21 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name=".SignActivity" />
-        <activity android:name=".DIndividualActivity.DWdqbActivity" />
-        <activity android:name=".DIndividualActivity.DMAgwbActivity" />
-        <activity android:name=".DIndividualActivity.DMAgodActivity" />
-        <activity android:name=".DIndividualActivity.DMAtravelActivity" />
-        <activity android:name=".DIndividualActivity.DMAcoupon" />
-        <activity android:name=".DIndividualActivity.DMBincomeActivity" />
-        <activity android:name=".DIndividualActivity.DMBgodtixian" />
-        <activity android:name=".DIndividualActivity.DMCgodhisActivity" />
-        <activity android:name=".DIndividualActivity.DMDtxdetailsActivity" />
-        <activity android:name=".DIndividualActivity.DMCReferActivity" />
-        <activity android:name=".DIndividualActivity.DMBrechargeActivity" />
-        <activity android:name=".DIndividualActivity.DMAinouthis" />
+        <activity android:name=".mActivity.SignActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.DWdqbActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.GWB.DMAgwbActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.DMAgodActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.DMAtravelActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.DMAcoupon" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.DMBincomeActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.DMBgodtixian" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.DMCgodhisActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.DMDtxdetailsActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.DMCReferActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.DMBrechargeActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.DMAinouthis" />
         <activity android:name=".DIndividualActivity.DMBinoutselectActivity" />
-        <activity android:name=".DIndividualActivity.DSAllActivity" />
+        <activity android:name=".DIndividualActivity.Order.DSAllActivity" />
         <activity android:name=".Setting.DSetingActivity" />
         <activity android:name=".Setting.DSnameActivity" />
         <activity android:name=".Setting.ChangehoneActivity" />
@@ -90,20 +92,61 @@
         <activity android:name=".DIndividualActivity.Addresssave" />
         <activity android:name=".DIndividualActivity.PopulazeActivity" />
         <activity android:name=".DIndividualActivity.CollectActivity" />
-        <activity android:name=".DIndividualActivity.OrderdetailsActivity" />
-        <activity android:name=".DIndividualActivity.ChonglineActivity"></activity>
+        <activity android:name=".DIndividualActivity.Order.OrderdetailsActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.ChonglineActivity" />
+        <activity android:name=".DIndividualActivity.ContactListView" />
         <activity
-            android:name="com.example.transtion.my5th.demo.PayDemoActivity"
+            android:name=".alipay.PayDemoActivity"
             android:icon="@drawable/msp_icon"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name" />
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".DIndividualActivity.Order.RecoverActivity" />
+        <activity android:name=".DIndividualActivity.Order.OrderselectActivity" />
+        <activity
+            android:name=".AHomeActivity.TextActivity"
+            android:theme="@style/ViewerTheme" />
+        <activity android:name=".AHomeActivity.PinpaiActivity" />
+        <activity android:name=".BShopcar.ShopcarActivity" />
+        <activity android:name=".DIndividualActivity.EvaluateActivity" />
+        <activity android:name=".AHomeActivity.SelectActivity" />
+        <activity android:name=".AHomeActivity.SelectresultActivity" />
+        <activity android:name=".BShopcar.GoodsorderActivity" />
+        <activity android:name=".BShopcar.ShouyinActivity" />
+        <activity android:name=".alipay.SelectcouponActivity" />
+        <activity
+            android:name=".wxapi.ShowFromWXActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".wxapi.PayActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity android:name=".BShopcar.FendanActivity" />
+        <activity android:name=".AHomeActivity.MessageActivity" />
+        <activity android:name=".AHomeActivity.BanderdetailsDActivity" />
+        <activity android:name=".DIndividualActivity.TuijianActivity" />
+        <activity android:name=".AHomeActivity.MessagedetailActivity" />
+        <activity android:name=".BShopcar.LogisticActivity" />
+        <activity
+            android:name=".AHomeActivity.WebActivity"
+            android:label="@string/title_activity_web"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DIndividualActivity.ShimingdetialActivity" />
+        <activity android:name=".DIndividualActivity.Shimingshow" />
+        <activity android:name=".BShopcar.PayResultActivity" />
+        <activity android:name=".BShopcar.PayfalseresultActivity" />
+        <activity android:name=".mActivity.TransationActivity" />
+        <activity android:name=".DIndividualActivity.MyWallet.Commision.WaitincomeActivity" />
+        <activity android:name=".mActivity.BindphoneActivity" />
+        <activity android:name=".AHomeActivity.Text4qqtmActivity" />
+        <activity android:name=".AHomeActivity.Web4memberActivity"></activity>
     </application>
 
 </manifest>

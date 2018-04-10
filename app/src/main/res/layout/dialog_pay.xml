@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingBottom="@dimen/x27"
+    >
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+
+        <ImageView
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:background="@drawable/pingtaipay"
+            android:id="@+id/imageView23" />
+
+        <ImageView
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:src="@drawable/close"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:id="@+id/dialog_pay" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginLeft="@dimen/x17"
+        android:layout_marginRight="@dimen/x17"
+        >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/x30"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/x10"
+            android:gravity="center_vertical"
+            android:ems="10"
+            android:textSize="@dimen/x11"
+            android:textColor="@color/main_gry"
+            android:hint="输入平台支付密码"
+            android:textColorHint="@color/main_sgry"
+            android:background="@drawable/redandwhitenoripple"
+
+            android:id="@+id/dialog_pay_password" />
+        <Button
+            android:layout_width="@dimen/x67"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/x13"
+            android:textColor="#fff"
+            android:background="@drawable/buttonback"
+            android:text="确认付款"
+            android:minHeight="0dp"
+            android:id="@+id/dialog_pay_commit"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

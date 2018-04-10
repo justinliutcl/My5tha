@@ -7,66 +7,64 @@ import java.util.List;
  * Created by baicai on 2016/3/14.
  */
 public class GoodsorderItem {
-    private double CouponMoney;
+    private double Commission;
+    private String CouponMoney;
     private double Total;
     private String OperateTime;
     private String OrderStatus;
     private String OrderStatusString;
     private String IssueId;
     private String OrderNumber;
+    private double SurplusMoney;
+    private List<GoodsorderItem>SubOrderList;
+    private List<OrderDetailItem> OrderDetailViewList;
 
-    public void setIssueId(String issueId) {
-        IssueId = issueId;
+    DecimalFormat df = new DecimalFormat("#0.00");
+
+    public double getSurplusMoney() {
+        return SurplusMoney;
     }
 
-    public String getOrderNumber() {
-        return OrderNumber;
+    public void setSurplusMoney(double surplusMoney) {
+        SurplusMoney = surplusMoney;
     }
 
-    public void setOrderNumber(String orderNumber) {
-        OrderNumber = orderNumber;
-    }
-
-    public String getIssueId() {
-        return IssueId;
-    }
-
-    public GoodsorderItem(double couponMoney, double total, String operateTime, String orderStatus, String orderStatusString, String issueId, List<OrderDetailItem> list) {
-
+    public GoodsorderItem(double commission, String couponMoney, double total, String operateTime, String orderStatus, String orderStatusString, String issueId, String orderNumber, List<GoodsorderItem> subOrderList, List<OrderDetailItem> orderDetailViewList) {
+        Commission = commission;
         CouponMoney = couponMoney;
         Total = total;
         OperateTime = operateTime;
         OrderStatus = orderStatus;
         OrderStatusString = orderStatusString;
         IssueId = issueId;
-        this.df = df;
-        this.list = list;
+        OrderNumber = orderNumber;
+        SubOrderList = subOrderList;
+        OrderDetailViewList = orderDetailViewList;
     }
 
-    DecimalFormat df = new DecimalFormat("#0.00");
+    public GoodsorderItem() {
 
-    public String getOrderStatusString() {
-
-        return OrderStatusString;
     }
 
-    public void setOrderStatusString(String orderStatusString) {
-        OrderStatusString = orderStatusString;
+    public double getCommission() {
+
+        return Commission;
     }
 
-    private List<OrderDetailItem> list;
-
+    public void setCommission(double commission) {
+        Commission = commission;
+    }
 
     public String getCouponMoney() {
-        return df.format(CouponMoney);
+        return CouponMoney;
     }
 
-    public void setCouponMoney(double couponMoney) {
+    public void setCouponMoney(String couponMoney) {
         CouponMoney = couponMoney;
     }
 
-    public String getTotal() {
-        return df.format(Total);
+    public double getTotal() {
+        return Total;
     }
 
     public void setTotal(double total) {
@@ -89,16 +87,43 @@ public class GoodsorderItem {
         OrderStatus = orderStatus;
     }
 
-    public List<OrderDetailItem> getList() {
-        return list;
+    public String getOrderStatusString() {
+        return OrderStatusString;
     }
 
-    public void setList(List<OrderDetailItem> list) {
-        this.list = list;
+    public void setOrderStatusString(String orderStatusString) {
+        OrderStatusString = orderStatusString;
     }
 
+    public String getIssueId() {
+        return IssueId;
+    }
 
-    public GoodsorderItem() {
+    public void setIssueId(String issueId) {
+        IssueId = issueId;
+    }
 
+    public String getOrderNumber() {
+        return OrderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        OrderNumber = orderNumber;
+    }
+
+    public List<GoodsorderItem> getSubOrderList() {
+        return SubOrderList;
+    }
+
+    public void setSubOrderList(List<GoodsorderItem> subOrderList) {
+        SubOrderList = subOrderList;
+    }
+
+    public List<OrderDetailItem> getOrderDetailViewList() {
+        return OrderDetailViewList;
+    }
+
+    public void setOrderDetailViewList(List<OrderDetailItem> orderDetailViewList) {
+        OrderDetailViewList = orderDetailViewList;
     }
 }

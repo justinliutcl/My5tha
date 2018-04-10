@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        android:id="@+id/textView88" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:padding="@dimen/x10"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/adapter_fendan_layout"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保"
+            android:background="@drawable/icon_bao"
+            android:textColor="#000000ff"
+            android:padding="1dp"
+            android:textSize="@dimen/x11"
+
+            android:id="@+id/adapter_fendan_titletype" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="以下商品由第五大街保税仓发货。请结算"
+            android:layout_marginLeft="@dimen/x5"
+            android:textColor="@color/main_sgry"
+            android:textSize="@dimen/x11"
+            android:id="@+id/adapter_fendan_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计："
+            android:textSize="@dimen/x12"
+            android:textColor="@color/main_gry"
+            android:id="@+id/textView87" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.00"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/x12"
+            android:id="@+id/adapter_fendan_type" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        android:id="@+id/textView89" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_gry"
+        android:id="@+id/adapter_fendan_recycle"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        >
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x10"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="￥240.00"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/x12"
+            android:layout_marginRight="@dimen/x10"
+            android:id="@+id/adapter_fendan_money" />
+
+        <Button
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进行结算"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x13"
+            android:background="@drawable/buttonback"
+            android:textColor="#fff"
+            android:paddingTop="@dimen/x5"
+            android:paddingBottom="@dimen/x5"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:id="@+id/adapter_fendan_buy" />
+    </LinearLayout>
+
+</LinearLayout>

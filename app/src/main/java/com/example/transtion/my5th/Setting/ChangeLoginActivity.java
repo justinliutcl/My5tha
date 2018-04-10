@@ -6,8 +6,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.transtion.my5th.BaseActivity;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.example.transtion.my5th.R;
+import com.example.transtion.my5th.mActivity.MainActivity;
+import com.example.transtion.my5th.mActivity.SignActivity;
 
 import fifthutil.JumpUtil;
 import httpConnection.HttpConnectionUtil;
@@ -43,7 +45,7 @@ EditText oldcode,newcode;
 
         switch (v.getId()){
             case R.id.changelogincode_forgetcode:
-                JumpUtil.jump2finish(this,ForgetcodeActivity.class,true);
+                JumpUtil.jumpWithValue2finash(this,ForgetcodeActivity.class,true,new String[]{"phone"},new String[]{getIntent().getStringExtra("phone")});
                 break;
             case R.id.changelogincode_save:
                 commit();
@@ -63,7 +65,9 @@ EditText oldcode,newcode;
             public void JsonCallBack(String str) {
                 loding.disShapeLoding();
                     show("保存成功");
-                JumpUtil.jump2finash(ChangeLoginActivity.this);
+                DSetingActivity.instance.finish();
+                MainActivity.instance.finish();
+                JumpUtil.jump2hdown(ChangeLoginActivity.this, SignActivity.class, true);
             }
         });
     }

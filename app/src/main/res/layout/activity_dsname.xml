@@ -43,7 +43,7 @@
             android:text="确定"
             android:layout_marginRight="5dp"
             android:layout_centerVertical="true"
-            android:textColor="@color/main_sgry"
+            android:textColor="#444"
             android:textSize="17dp"
             />
 
@@ -76,6 +76,7 @@
             android:hint="请输入昵称"
             android:padding="10dp"
             android:background="#fff"
+            android:maxLength="8"
             android:inputType="text" >
 
         </EditText>
@@ -89,7 +90,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="4-20个字符，可由中英文、数字、“_”、“-”组成"
+        android:text="2-8个字符，可由中英文、数字、“_”、“-”组成"
         android:textSize="@dimen/ten"
         android:textColor="@color/main_sgry"
         android:layout_marginTop="@dimen/y13"

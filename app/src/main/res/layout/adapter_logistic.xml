@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/x61"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="@dimen/x11"
+                android:layout_height="@dimen/x11"
+                android:background="@drawable/grad_oval"
+                android:id="@+id/adapter_logistic_smalloval" />
+            <TextView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:background="@drawable/grad_oval"
+                android:visibility="gone"
+                android:id="@+id/adapter_logistic_bigoval" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#ccc"
+                android:id="@+id/textView92" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/x17"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/individualblack"
+                android:id="@+id/adapter_logistic_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="@dimen/x10"
+                android:textColor="@color/main_sgry"
+                android:layout_marginTop="@dimen/x5"
+                android:id="@+id/adapter_logistic_time" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginBottom="@dimen/x10"
+                android:id="@+id/textView97" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

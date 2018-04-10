@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.transtion.my5th.BShopcar.PayfalseresultActivity"
+    android:background="#fff"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <customUI.TopbarView
+        android:id="@+id/topbar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/x10"
+        android:paddingBottom="@dimen/x10"
+        android:background="#fff"
+        topbar:medtitle="支付成功"
+        topbar:left_size="30dp"
+        topbar:title_size="@dimen/title_size"
+        topbar:left_hsize="20dp"
+        ></customUI.TopbarView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/x30"
+        android:paddingBottom="@dimen/x20"
+
+        >
+
+        <ImageView
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_marginBottom="@dimen/x15"
+            android:background="@drawable/fail2"
+            android:id="@+id/iv_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/individualblack"
+            android:textSize="@dimen/x16"
+            android:text="支付失败"
+            android:id="@+id/tv_type" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_sgry"
+            android:layout_marginTop="@dimen/x10"
+            android:paddingLeft="@dimen/x40"
+            android:paddingRight="@dimen/x40"
+            android:gravity="center"
+            android:textSize="@dimen/x11"
+            android:text="该订单会为您保留30分钟，30分钟后如果仍未付款，系统将自动取消订单。"
+            android:id="@+id/tv_mes" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="10dp">
+
+
+        <Button
+            android:id="@+id/go2home"
+            android:layout_width="@dimen/x115"
+            android:layout_height="@dimen/x35"
+            android:background="@drawable/redandwhite"
+            android:minHeight="0dp"
+            android:padding="@dimen/buttonpadding"
+            android:text="去首页"
+
+            android:gravity="center"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/button_size" />
+        <Button
+            android:id="@+id/commit"
+            android:layout_width="@dimen/x115"
+            android:layout_height="@dimen/x35"
+            android:background="@drawable/buttonback"
+            android:minHeight="0dp"
+            android:padding="@dimen/buttonpadding"
+            android:text="查看订单"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/x30"
+            android:textColor="#fff"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+
+</LinearLayout>

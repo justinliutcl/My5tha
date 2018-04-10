@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DIndividualActivity.DMDtxdetailsActivity" android:background="@color/background"
+    tools:context=".DIndividualActivity.MyWallet.Commision.DMDtxdetailsActivity" android:background="@color/background"
     xmlns:topbar="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     >
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:background="#fff"
-        topbar:medtitle="我的购物币"
+        topbar:medtitle="提现详情"
         topbar:left_size="30dp"
         topbar:left_hsize="20dp"
         topbar:title_size="@dimen/title_size"
@@ -157,7 +157,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="提交提现申请"
+                            android:text="审核提交申请"
                             android:layout_marginTop="@dimen/y30"
                             android:textSize="@dimen/x12"
                             android:textColor="@color/black"

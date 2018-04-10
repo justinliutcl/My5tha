@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.transtion.my5th.BaseActivity;
 import com.example.transtion.my5th.R;
+import com.example.transtion.my5th.mActivity.BaseActivity;
 import com.mrwujay.cascade.model.CityModel;
 import com.mrwujay.cascade.model.DistrictModel;
 import com.mrwujay.cascade.model.ProvinceModel;
@@ -26,6 +26,7 @@ import java.util.Map;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import fifthutil.JumpUtil;
 import httpConnection.HttpConnectionUtil;
 import httpConnection.Path;
 import kankan.wheel.widget.OnWheelChangedListener;
@@ -41,7 +42,8 @@ public class Addresssave extends BaseActivity implements OnWheelChangedListener 
     LinearLayout selectarea;
     WheelView mViewProvince, mViewCity, mViewDistrict;
     AlertDialog ad;
-    String areaCode;
+    String areaCode,ProvinceCode,CityCode,Id;
+    String  p="[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）&;—|{}【】‘；：”“'。，、？]";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,7 @@ public class Addresssave extends BaseActivity implements OnWheelChangedListener 
         save = (Button) findViewById(R.id.addresssave_save);
         selectarea = (LinearLayout) findViewById(R.id.addresssave_layout_selectarea);
         Intent intent = getIntent();
+        Id="";
         if (intent.getStringExtra("name") !=null) {
             name.setText(intent.getStringExtra("name"));
             phone.setText(intent.getStringExtra("phone"));
@@ -69,8 +72,10 @@ public class Addresssave extends BaseActivity implements OnWheelChangedListener 
             City=intent.getStringExtra("City");
             Area=intent.getStringExtra("Area");
             area.setText(Province+" "+City+" "+Area);
+            ProvinceCode=intent.getStringExtra("ProvinceCode");
+            CityCode=intent.getStringExtra("CityCode");
             areaCode=intent.getStringExtra("AreaCode");
-
+            Id=intent.getStringExtra("Id");
         }
         setdialog();
 
@@ -120,15 +125,16 @@ public class Addresssave extends BaseActivity implements OnWheelChangedListener 
         String IdCard = idcard.getText().toString();
         String Address = detail.getText().toString();
         String Zipcode = zipcode.getText().toString();
-        HttpConnectionUtil.getJsonJsonwithDialog(this, path,
-                new String[]{"memberId", "Name", "Mobile", "Zipcode", "IdCard", "Address", "Province", "City", "Area", "AreaCode"},
-                new String[]{share.getMemberID(), Name, Mobile, Zipcode, IdCard, Address, Province, City, Area, AreaCode}, loding, new HttpConnectionUtil.OnJsonCall() {
-                    @Override
-                    public void JsonCallBack(String str) {
-                        loding.disShapeLoding();
-                        show("添加成功");
-                    }
-                });
+            HttpConnectionUtil.getJsonJsonwithDialog(this, path,
+                    new String[]{"memberId", "Name", "Mobile", "Zipcode", "IdCard", "Address", "Province", "City", "Area", "ProvinceCode", "CityCode", "AreaCode", "Id"},
+                    new String[]{share.getMemberID(), Name, Mobile, Zipcode, IdCard, Address, Province, City, Area, ProvinceCode, CityCode, AreaCode, Id}, loding, new HttpConnectionUtil.OnJsonCall() {
+                        @Override
+                        public void JsonCallBack(String str) {
+                            loding.disShapeLoding();
+                            show("添加成功");
+                            JumpUtil.jump2finash(Addresssave.this);
+                        }
+                    });
     }
 
     @Override
@@ -226,18 +232,23 @@ public class Addresssave extends BaseActivity implements OnWheelChangedListener 
 
     private void showSelectedResult() {
         area.setText(mCurrentProviceName + " " + mCurrentCityName + " " + mCurrentDistrictName);
+        String a[]=mCurrentZipCode.split(",");
         Province = mCurrentProviceName;
         City = mCurrentCityName;
         Area = mCurrentDistrictName;
-        AreaCode = mCurrentZipCode;
+        ProvinceCode=a[0];
+        CityCode=a[1];
+        AreaCode =a[2];
         ad.dismiss();
         setdialog();
+
 //		Toast.makeText(this, "选择城市:" + mCurrentProviceName + "," + mCurrentCityName + ","
 //                + mCurrentDistrictName + "," + mCurrentZipCode, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onChanged(WheelView wheel, int oldValue, int newValue) {
+
         if (wheel == mViewProvince) {
 			updateCities();
 		} else if (wheel == mViewCity) {
@@ -246,6 +257,6 @@ public class Addresssave extends BaseActivity implements OnWheelChangedListener 
 			mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[newValue];
 			mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
 		}
-
     }
+
 }
